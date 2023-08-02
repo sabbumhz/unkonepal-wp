@@ -1,0 +1,14 @@
+{
+    "name": "acf/category-list",
+    "title": "Category List",
+    "description": "Category",
+    "style": [ ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["Category"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "category-list.php"
+    },
+    "align": "full"
+}

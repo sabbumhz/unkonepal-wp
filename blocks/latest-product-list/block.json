@@ -1,0 +1,14 @@
+{
+    "name": "acf/product-list",
+    "title": "Latest Product List",
+    "description": "Latest Products",
+    "style": [ ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["products, latest products"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "latest-product-list.php"
+    },
+    "align": "full"
+}

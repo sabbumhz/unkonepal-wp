@@ -1,0 +1,14 @@
+{
+    "name": "acf/fifty-fifty",
+    "title": "Fifty-fifty",
+    "description": "50-50 Block",
+    "style": [ ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["fifty-fifty"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "fifty-fifty.php"
+    },
+    "align": "full"
+}
