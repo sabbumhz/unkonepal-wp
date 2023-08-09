@@ -20,33 +20,26 @@ if ( ! empty( $block['anchor'] ) ) {
 // Load values and assign defaults.
 $title            = get_field('block_title');
 $btnLink          = get_field( 'button' );
-$products         = get_field('product_list');
 
 ?>
 
 <!-- product listing section -->
 <section>
     <h2><?php echo esc_html( $title ); ?></h2>
-
+    <ul class="products">
     <?php
-        if( $products ): ?>
-        <ul class="product-list">
-            <?php foreach( $products as $product ): 
-                $permalink = get_permalink( $product->ID );
-                $product_title = get_the_title( $product->ID );
-                $product_img = get_the_post_thumbnail( $product->ID );
-                ?>
-                <li>
-                    <a href="<?php echo esc_url( $permalink ); ?>">
-                        <figure>
-                        <?php echo( $product_img ); ?>
-                        </figure>
-                        <h4><?php echo esc_html( $product_title ); ?></h4>
-                    </a>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    <?php endif; ?>
+        $product_cat_args = array(
+            'post_type'     => 'product',
+            'posts_per_page'=> 3,
+        );
+        $product_cat_query = new WP_Query( $product_cat_args );
+        if ( $product_cat_query -> have_posts() ) :
+            while ( $product_cat_query -> have_posts() ) : $product_cat_query -> the_post();
+                wc_get_template_part( 'content', 'product' );
+            endwhile;
+        endif;
+    ?>
+    </ul>
     <div>
         <?php
             if( $btnLink ): 

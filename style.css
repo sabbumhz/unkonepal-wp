@@ -1,3 +1,11 @@
+/*  
+Theme Name: UnkoNepal (Progress)
+Theme URI: https://unkonepal.com
+Description: Unko Nepal Work in Progress
+Version: 1
+Author: Sabbu Maharjan
+Author URI: https://unkonepal.com
+*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -5,7 +13,11 @@
 html, body, div, span, applet, object, iframe,
 h1,
 .logo h2,
-.logo h1, h2, h3, .product-price, section h2 + p, h4, h5, h6, p, .page section h2 + p, blockquote, pre,
+.logo h1, h2, h3, .comment-reply-title, section h2 + p, section h2 + textarea,
+section h2 + input, .page section h2 + textarea,
+.page section h2 + input, .page section h2 + .btn--primary, .page section .woocommerce-variation-add-to-cart h2 + .button, .woocommerce-variation-add-to-cart .page section h2 + .button, .page section h2 + .btn--secondary, .page section h2 + .out-of-stock, h4, ul.products h2, h5, h6, p, textarea,
+input, .page section h2 + p, .btn--primary, .woocommerce-variation-add-to-cart .button, textarea[type=submit],
+input[type=submit], .btn--secondary, .out-of-stock, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -137,50 +149,557 @@ a {
   color: var(--chestnut);
 }
 
-h1 + a.btn, h1 + p, .logo h2 + p, .logo h1 + p, h2 + a.btn, h2 + p, .page section h2 + p, h3 + a.btn, .product-price + a.btn, section h2 + p + a.btn, h3 + p, .product-price + p, section h2 + p + p, .page section h2 + p + p, h4 + a.btn, h4 + p, h5 + a.btn, h5 + p, h6 + a.btn, h6 + p {
+h1 + a.btn, .logo h2 + a.btn, .logo h1 + a.btn, h1 + p, .logo h2 + p, .logo h1 + p, h1 + textarea, .logo h2 + textarea, .logo h1 + textarea,
+h1 + input,
+.logo h2 + input,
+.logo h1 + input, h1 + .btn--primary, .woocommerce-variation-add-to-cart h1 + .button, .logo h2 + .btn--primary, .logo .woocommerce-variation-add-to-cart h2 + .button, .woocommerce-variation-add-to-cart .logo h2 + .button, .logo h1 + .btn--primary, .logo .woocommerce-variation-add-to-cart h1 + .button, .woocommerce-variation-add-to-cart .logo h1 + .button, h1 + textarea[type=submit], .logo h2 + textarea[type=submit], .logo h1 + textarea[type=submit],
+h1 + input[type=submit],
+.logo h2 + input[type=submit],
+.logo h1 + input[type=submit], h1 + .btn--secondary, h1 + .out-of-stock, .logo h2 + .btn--secondary, .logo h2 + .out-of-stock, .logo h1 + .btn--secondary, .logo h1 + .out-of-stock, h2 + a.btn, h2 + p, h2 + textarea,
+h2 + input, .page section h2 + textarea,
+.page section h2 + input, .page section h2 + p, .page section h2 + textarea,
+.page section h2 + input, .page section h2 + textarea,
+.page section h2 + input, .page section h2 + .btn--primary, .page section .woocommerce-variation-add-to-cart h2 + .button, .woocommerce-variation-add-to-cart .page section h2 + .button, .page section h2 + textarea[type=submit],
+.page section h2 + input[type=submit], .page section h2 + .btn--secondary, .page section h2 + .out-of-stock, h2 + .btn--primary, .woocommerce-variation-add-to-cart h2 + .button, h2 + textarea[type=submit],
+h2 + input[type=submit], h2 + .btn--secondary, h2 + .out-of-stock, h3 + a.btn, .comment-reply-title + a.btn, section h2 + p + a.btn, section h2 + textarea + a.btn,
+section h2 + input + a.btn, .page section h2 + textarea + a.btn,
+.page section h2 + input + a.btn, section h2 + .btn--primary + a.btn, section .woocommerce-variation-add-to-cart h2 + .button + a.btn, .woocommerce-variation-add-to-cart section h2 + .button + a.btn, section h2 + textarea[type=submit] + a.btn,
+section h2 + input[type=submit] + a.btn, section h2 + .btn--secondary + a.btn, section h2 + .out-of-stock + a.btn, h3 + p, .comment-reply-title + p, h3 + textarea, .comment-reply-title + textarea,
+h3 + input,
+.comment-reply-title + input, section h2 + p + p, section h2 + textarea + p,
+section h2 + input + p, .page section h2 + textarea + p,
+.page section h2 + input + p, section h2 + p + textarea, section h2 + textarea + textarea,
+section h2 + input + textarea, .page section h2 + textarea + textarea,
+.page section h2 + input + textarea,
+section h2 + p + input,
+section h2 + textarea + input,
+section h2 + input + input,
+.page section h2 + textarea + input,
+.page section h2 + input + input, .page section h2 + p + p, .page section h2 + textarea + p,
+.page section h2 + input + p, .page section h2 + textarea + p,
+.page section h2 + input + p, .page section h2 + p + textarea, .page section h2 + textarea + textarea,
+.page section h2 + input + textarea, .page section h2 + textarea + textarea,
+.page section h2 + input + textarea,
+.page section h2 + p + input,
+.page section h2 + textarea + input,
+.page section h2 + input + input,
+.page section h2 + textarea + input,
+.page section h2 + input + input, section h2 + .btn--primary + p, section .woocommerce-variation-add-to-cart h2 + .button + p, .woocommerce-variation-add-to-cart section h2 + .button + p, section h2 + textarea[type=submit] + p,
+section h2 + input[type=submit] + p, section h2 + .btn--primary + textarea, section .woocommerce-variation-add-to-cart h2 + .button + textarea, .woocommerce-variation-add-to-cart section h2 + .button + textarea, section h2 + textarea[type=submit] + textarea,
+section h2 + input[type=submit] + textarea,
+section h2 + .btn--primary + input,
+section .woocommerce-variation-add-to-cart h2 + .button + input,
+.woocommerce-variation-add-to-cart section h2 + .button + input,
+section h2 + textarea[type=submit] + input,
+section h2 + input[type=submit] + input, .page section h2 + h2.btn--primary + textarea, .page section .woocommerce-variation-add-to-cart h2 + h2.button + textarea, .woocommerce-variation-add-to-cart .page section h2 + h2.button + textarea,
+.page section h2 + h2.btn--primary + input,
+.page section .woocommerce-variation-add-to-cart h2 + h2.button + input,
+.woocommerce-variation-add-to-cart .page section h2 + h2.button + input, section h2 + .btn--secondary + p, section h2 + .out-of-stock + p, section h2 + .btn--secondary + textarea, section h2 + .out-of-stock + textarea,
+section h2 + .btn--secondary + input,
+section h2 + .out-of-stock + input, .page section h2 + h2.btn--secondary + textarea, .page section h2 + h2.out-of-stock + textarea,
+.page section h2 + h2.btn--secondary + input,
+.page section h2 + h2.out-of-stock + input, h3 + .btn--primary, .comment-reply-title + .btn--primary, .woocommerce-variation-add-to-cart h3 + .button, .woocommerce-variation-add-to-cart .comment-reply-title + .button, h3 + textarea[type=submit], .comment-reply-title + textarea[type=submit],
+h3 + input[type=submit],
+.comment-reply-title + input[type=submit], section h2 + p + .btn--primary, section .woocommerce-variation-add-to-cart h2 + p + .button, .woocommerce-variation-add-to-cart section h2 + p + .button, section h2 + p + textarea[type=submit],
+section h2 + p + input[type=submit], section h2 + textarea + .btn--primary, section .woocommerce-variation-add-to-cart h2 + textarea + .button, .woocommerce-variation-add-to-cart section h2 + textarea + .button, section h2 + textarea + textarea[type=submit],
+section h2 + textarea + input[type=submit],
+section h2 + input + .btn--primary,
+section .woocommerce-variation-add-to-cart h2 + input + .button,
+.woocommerce-variation-add-to-cart section h2 + input + .button,
+section h2 + input + textarea[type=submit],
+section h2 + input + input[type=submit], .page section h2 + textarea + .btn--primary, .page section .woocommerce-variation-add-to-cart h2 + textarea + .button, .woocommerce-variation-add-to-cart .page section h2 + textarea + .button, .page section h2 + textarea + textarea[type=submit],
+.page section h2 + textarea + input[type=submit],
+.page section h2 + input + .btn--primary,
+.page section .woocommerce-variation-add-to-cart h2 + input + .button,
+.woocommerce-variation-add-to-cart .page section h2 + input + .button,
+.page section h2 + input + textarea[type=submit],
+.page section h2 + input + input[type=submit], section h2 + .btn--primary + .btn--primary, section .woocommerce-variation-add-to-cart h2 + .button + .btn--primary, .woocommerce-variation-add-to-cart section h2 + .button + .btn--primary, section .woocommerce-variation-add-to-cart h2 + .btn--primary + .button, .woocommerce-variation-add-to-cart section h2 + .btn--primary + .button, section .woocommerce-variation-add-to-cart h2 + .button + .button, .woocommerce-variation-add-to-cart section h2 + .button + .button, section h2 + textarea[type=submit] + .btn--primary, section .woocommerce-variation-add-to-cart h2 + textarea[type=submit] + .button, .woocommerce-variation-add-to-cart section h2 + textarea[type=submit] + .button,
+section h2 + input[type=submit] + .btn--primary,
+section .woocommerce-variation-add-to-cart h2 + input[type=submit] + .button,
+.woocommerce-variation-add-to-cart section h2 + input[type=submit] + .button, section h2 + .btn--primary + textarea[type=submit], section .woocommerce-variation-add-to-cart h2 + .button + textarea[type=submit], .woocommerce-variation-add-to-cart section h2 + .button + textarea[type=submit], section h2 + textarea[type=submit] + textarea[type=submit],
+section h2 + input[type=submit] + textarea[type=submit],
+section h2 + .btn--primary + input[type=submit],
+section .woocommerce-variation-add-to-cart h2 + .button + input[type=submit],
+.woocommerce-variation-add-to-cart section h2 + .button + input[type=submit],
+section h2 + textarea[type=submit] + input[type=submit],
+section h2 + input[type=submit] + input[type=submit], section h2 + .btn--secondary + .btn--primary, section h2 + .out-of-stock + .btn--primary, section .woocommerce-variation-add-to-cart h2 + .btn--secondary + .button, section .woocommerce-variation-add-to-cart h2 + .out-of-stock + .button, .woocommerce-variation-add-to-cart section h2 + .btn--secondary + .button, .woocommerce-variation-add-to-cart section h2 + .out-of-stock + .button, section h2 + .btn--secondary + textarea[type=submit], section h2 + .out-of-stock + textarea[type=submit],
+section h2 + .btn--secondary + input[type=submit],
+section h2 + .out-of-stock + input[type=submit], h3 + .btn--secondary, .comment-reply-title + .btn--secondary, h3 + .out-of-stock, .comment-reply-title + .out-of-stock, section h2 + p + .btn--secondary, section h2 + p + .out-of-stock, section h2 + textarea + .btn--secondary, section h2 + textarea + .out-of-stock,
+section h2 + input + .btn--secondary,
+section h2 + input + .out-of-stock, .page section h2 + textarea + .btn--secondary, .page section h2 + textarea + .out-of-stock,
+.page section h2 + input + .btn--secondary,
+.page section h2 + input + .out-of-stock, section h2 + .btn--primary + .btn--secondary, section h2 + .btn--primary + .out-of-stock, section .woocommerce-variation-add-to-cart h2 + .button + .btn--secondary, section .woocommerce-variation-add-to-cart h2 + .button + .out-of-stock, .woocommerce-variation-add-to-cart section h2 + .button + .btn--secondary, .woocommerce-variation-add-to-cart section h2 + .button + .out-of-stock, section h2 + textarea[type=submit] + .btn--secondary, section h2 + textarea[type=submit] + .out-of-stock,
+section h2 + input[type=submit] + .btn--secondary,
+section h2 + input[type=submit] + .out-of-stock, section h2 + .btn--secondary + .btn--secondary, section h2 + .out-of-stock + .btn--secondary, section h2 + .btn--secondary + .out-of-stock, section h2 + .out-of-stock + .out-of-stock, h4 + a.btn, ul.products h2 + a.btn, h4 + p, ul.products h2 + p, h4 + textarea, ul.products h2 + textarea,
+h4 + input,
+ul.products h2 + input, h4 + .btn--primary, .woocommerce-variation-add-to-cart h4 + .button, ul.products h2 + .btn--primary, ul.products .woocommerce-variation-add-to-cart h2 + .button, .woocommerce-variation-add-to-cart ul.products h2 + .button, h4 + textarea[type=submit], ul.products h2 + textarea[type=submit],
+h4 + input[type=submit],
+ul.products h2 + input[type=submit], h4 + .btn--secondary, h4 + .out-of-stock, ul.products h2 + .btn--secondary, ul.products h2 + .out-of-stock, h5 + a.btn, h5 + p, h5 + textarea,
+h5 + input, h5 + .btn--primary, .woocommerce-variation-add-to-cart h5 + .button, h5 + textarea[type=submit],
+h5 + input[type=submit], h5 + .btn--secondary, h5 + .out-of-stock, h6 + a.btn, h6 + p, h6 + textarea,
+h6 + input, h6 + .btn--primary, .woocommerce-variation-add-to-cart h6 + .button, h6 + textarea[type=submit],
+h6 + input[type=submit], h6 + .btn--secondary, h6 + .out-of-stock {
   margin-top: 16px;
 }
 @media (min-width: 768px) {
-  h1 + a.btn, h1 + p, .logo h2 + p, .logo h1 + p, h2 + a.btn, h2 + p, .page section h2 + p, h3 + a.btn, .product-price + a.btn, section h2 + p + a.btn, h3 + p, .product-price + p, section h2 + p + p, .page section h2 + p + p, h4 + a.btn, h4 + p, h5 + a.btn, h5 + p, h6 + a.btn, h6 + p {
+  h1 + a.btn, .logo h2 + a.btn, .logo h1 + a.btn, h1 + p, .logo h2 + p, .logo h1 + p, h1 + textarea, .logo h2 + textarea, .logo h1 + textarea,
+  h1 + input,
+  .logo h2 + input,
+  .logo h1 + input, h1 + .btn--primary, .woocommerce-variation-add-to-cart h1 + .button, .logo h2 + .btn--primary, .logo .woocommerce-variation-add-to-cart h2 + .button, .woocommerce-variation-add-to-cart .logo h2 + .button, .logo h1 + .btn--primary, .logo .woocommerce-variation-add-to-cart h1 + .button, .woocommerce-variation-add-to-cart .logo h1 + .button, h1 + textarea[type=submit], .logo h2 + textarea[type=submit], .logo h1 + textarea[type=submit],
+  h1 + input[type=submit],
+  .logo h2 + input[type=submit],
+  .logo h1 + input[type=submit], h1 + .btn--secondary, h1 + .out-of-stock, .logo h2 + .btn--secondary, .logo h2 + .out-of-stock, .logo h1 + .btn--secondary, .logo h1 + .out-of-stock, h2 + a.btn, h2 + p, h2 + textarea,
+  h2 + input, .page section h2 + textarea,
+  .page section h2 + input, .page section h2 + p, .page section h2 + textarea,
+  .page section h2 + input, .page section h2 + textarea,
+  .page section h2 + input, .page section h2 + .btn--primary, .page section .woocommerce-variation-add-to-cart h2 + .button, .woocommerce-variation-add-to-cart .page section h2 + .button, .page section h2 + textarea[type=submit],
+  .page section h2 + input[type=submit], .page section h2 + .btn--secondary, .page section h2 + .out-of-stock, h2 + .btn--primary, .woocommerce-variation-add-to-cart h2 + .button, h2 + textarea[type=submit],
+  h2 + input[type=submit], h2 + .btn--secondary, h2 + .out-of-stock, h3 + a.btn, .comment-reply-title + a.btn, section h2 + p + a.btn, section h2 + textarea + a.btn,
+  section h2 + input + a.btn, .page section h2 + textarea + a.btn,
+  .page section h2 + input + a.btn, section h2 + .btn--primary + a.btn, section .woocommerce-variation-add-to-cart h2 + .button + a.btn, .woocommerce-variation-add-to-cart section h2 + .button + a.btn, section h2 + textarea[type=submit] + a.btn,
+  section h2 + input[type=submit] + a.btn, section h2 + .btn--secondary + a.btn, section h2 + .out-of-stock + a.btn, h3 + p, .comment-reply-title + p, h3 + textarea, .comment-reply-title + textarea,
+  h3 + input,
+  .comment-reply-title + input, section h2 + p + p, section h2 + textarea + p,
+  section h2 + input + p, .page section h2 + textarea + p,
+  .page section h2 + input + p, section h2 + p + textarea, section h2 + textarea + textarea,
+  section h2 + input + textarea, .page section h2 + textarea + textarea,
+  .page section h2 + input + textarea,
+  section h2 + p + input,
+  section h2 + textarea + input,
+  section h2 + input + input,
+  .page section h2 + textarea + input,
+  .page section h2 + input + input, .page section h2 + p + p, .page section h2 + textarea + p,
+  .page section h2 + input + p, .page section h2 + textarea + p,
+  .page section h2 + input + p, .page section h2 + p + textarea, .page section h2 + textarea + textarea,
+  .page section h2 + input + textarea, .page section h2 + textarea + textarea,
+  .page section h2 + input + textarea,
+  .page section h2 + p + input,
+  .page section h2 + textarea + input,
+  .page section h2 + input + input,
+  .page section h2 + textarea + input,
+  .page section h2 + input + input, section h2 + .btn--primary + p, section .woocommerce-variation-add-to-cart h2 + .button + p, .woocommerce-variation-add-to-cart section h2 + .button + p, section h2 + textarea[type=submit] + p,
+  section h2 + input[type=submit] + p, section h2 + .btn--primary + textarea, section .woocommerce-variation-add-to-cart h2 + .button + textarea, .woocommerce-variation-add-to-cart section h2 + .button + textarea, section h2 + textarea[type=submit] + textarea,
+  section h2 + input[type=submit] + textarea,
+  section h2 + .btn--primary + input,
+  section .woocommerce-variation-add-to-cart h2 + .button + input,
+  .woocommerce-variation-add-to-cart section h2 + .button + input,
+  section h2 + textarea[type=submit] + input,
+  section h2 + input[type=submit] + input, .page section h2 + h2.btn--primary + textarea, .page section .woocommerce-variation-add-to-cart h2 + h2.button + textarea, .woocommerce-variation-add-to-cart .page section h2 + h2.button + textarea,
+  .page section h2 + h2.btn--primary + input,
+  .page section .woocommerce-variation-add-to-cart h2 + h2.button + input,
+  .woocommerce-variation-add-to-cart .page section h2 + h2.button + input, section h2 + .btn--secondary + p, section h2 + .out-of-stock + p, section h2 + .btn--secondary + textarea, section h2 + .out-of-stock + textarea,
+  section h2 + .btn--secondary + input,
+  section h2 + .out-of-stock + input, .page section h2 + h2.btn--secondary + textarea, .page section h2 + h2.out-of-stock + textarea,
+  .page section h2 + h2.btn--secondary + input,
+  .page section h2 + h2.out-of-stock + input, h3 + .btn--primary, .comment-reply-title + .btn--primary, .woocommerce-variation-add-to-cart h3 + .button, .woocommerce-variation-add-to-cart .comment-reply-title + .button, h3 + textarea[type=submit], .comment-reply-title + textarea[type=submit],
+  h3 + input[type=submit],
+  .comment-reply-title + input[type=submit], section h2 + p + .btn--primary, section .woocommerce-variation-add-to-cart h2 + p + .button, .woocommerce-variation-add-to-cart section h2 + p + .button, section h2 + p + textarea[type=submit],
+  section h2 + p + input[type=submit], section h2 + textarea + .btn--primary, section .woocommerce-variation-add-to-cart h2 + textarea + .button, .woocommerce-variation-add-to-cart section h2 + textarea + .button, section h2 + textarea + textarea[type=submit],
+  section h2 + textarea + input[type=submit],
+  section h2 + input + .btn--primary,
+  section .woocommerce-variation-add-to-cart h2 + input + .button,
+  .woocommerce-variation-add-to-cart section h2 + input + .button,
+  section h2 + input + textarea[type=submit],
+  section h2 + input + input[type=submit], .page section h2 + textarea + .btn--primary, .page section .woocommerce-variation-add-to-cart h2 + textarea + .button, .woocommerce-variation-add-to-cart .page section h2 + textarea + .button, .page section h2 + textarea + textarea[type=submit],
+  .page section h2 + textarea + input[type=submit],
+  .page section h2 + input + .btn--primary,
+  .page section .woocommerce-variation-add-to-cart h2 + input + .button,
+  .woocommerce-variation-add-to-cart .page section h2 + input + .button,
+  .page section h2 + input + textarea[type=submit],
+  .page section h2 + input + input[type=submit], section h2 + .btn--primary + .btn--primary, section .woocommerce-variation-add-to-cart h2 + .button + .btn--primary, .woocommerce-variation-add-to-cart section h2 + .button + .btn--primary, section .woocommerce-variation-add-to-cart h2 + .btn--primary + .button, .woocommerce-variation-add-to-cart section h2 + .btn--primary + .button, section .woocommerce-variation-add-to-cart h2 + .button + .button, .woocommerce-variation-add-to-cart section h2 + .button + .button, section h2 + textarea[type=submit] + .btn--primary, section .woocommerce-variation-add-to-cart h2 + textarea[type=submit] + .button, .woocommerce-variation-add-to-cart section h2 + textarea[type=submit] + .button,
+  section h2 + input[type=submit] + .btn--primary,
+  section .woocommerce-variation-add-to-cart h2 + input[type=submit] + .button,
+  .woocommerce-variation-add-to-cart section h2 + input[type=submit] + .button, section h2 + .btn--primary + textarea[type=submit], section .woocommerce-variation-add-to-cart h2 + .button + textarea[type=submit], .woocommerce-variation-add-to-cart section h2 + .button + textarea[type=submit], section h2 + textarea[type=submit] + textarea[type=submit],
+  section h2 + input[type=submit] + textarea[type=submit],
+  section h2 + .btn--primary + input[type=submit],
+  section .woocommerce-variation-add-to-cart h2 + .button + input[type=submit],
+  .woocommerce-variation-add-to-cart section h2 + .button + input[type=submit],
+  section h2 + textarea[type=submit] + input[type=submit],
+  section h2 + input[type=submit] + input[type=submit], section h2 + .btn--secondary + .btn--primary, section h2 + .out-of-stock + .btn--primary, section .woocommerce-variation-add-to-cart h2 + .btn--secondary + .button, section .woocommerce-variation-add-to-cart h2 + .out-of-stock + .button, .woocommerce-variation-add-to-cart section h2 + .btn--secondary + .button, .woocommerce-variation-add-to-cart section h2 + .out-of-stock + .button, section h2 + .btn--secondary + textarea[type=submit], section h2 + .out-of-stock + textarea[type=submit],
+  section h2 + .btn--secondary + input[type=submit],
+  section h2 + .out-of-stock + input[type=submit], h3 + .btn--secondary, .comment-reply-title + .btn--secondary, h3 + .out-of-stock, .comment-reply-title + .out-of-stock, section h2 + p + .btn--secondary, section h2 + p + .out-of-stock, section h2 + textarea + .btn--secondary, section h2 + textarea + .out-of-stock,
+  section h2 + input + .btn--secondary,
+  section h2 + input + .out-of-stock, .page section h2 + textarea + .btn--secondary, .page section h2 + textarea + .out-of-stock,
+  .page section h2 + input + .btn--secondary,
+  .page section h2 + input + .out-of-stock, section h2 + .btn--primary + .btn--secondary, section h2 + .btn--primary + .out-of-stock, section .woocommerce-variation-add-to-cart h2 + .button + .btn--secondary, section .woocommerce-variation-add-to-cart h2 + .button + .out-of-stock, .woocommerce-variation-add-to-cart section h2 + .button + .btn--secondary, .woocommerce-variation-add-to-cart section h2 + .button + .out-of-stock, section h2 + textarea[type=submit] + .btn--secondary, section h2 + textarea[type=submit] + .out-of-stock,
+  section h2 + input[type=submit] + .btn--secondary,
+  section h2 + input[type=submit] + .out-of-stock, section h2 + .btn--secondary + .btn--secondary, section h2 + .out-of-stock + .btn--secondary, section h2 + .btn--secondary + .out-of-stock, section h2 + .out-of-stock + .out-of-stock, h4 + a.btn, ul.products h2 + a.btn, h4 + p, ul.products h2 + p, h4 + textarea, ul.products h2 + textarea,
+  h4 + input,
+  ul.products h2 + input, h4 + .btn--primary, .woocommerce-variation-add-to-cart h4 + .button, ul.products h2 + .btn--primary, ul.products .woocommerce-variation-add-to-cart h2 + .button, .woocommerce-variation-add-to-cart ul.products h2 + .button, h4 + textarea[type=submit], ul.products h2 + textarea[type=submit],
+  h4 + input[type=submit],
+  ul.products h2 + input[type=submit], h4 + .btn--secondary, h4 + .out-of-stock, ul.products h2 + .btn--secondary, ul.products h2 + .out-of-stock, h5 + a.btn, h5 + p, h5 + textarea,
+  h5 + input, h5 + .btn--primary, .woocommerce-variation-add-to-cart h5 + .button, h5 + textarea[type=submit],
+  h5 + input[type=submit], h5 + .btn--secondary, h5 + .out-of-stock, h6 + a.btn, h6 + p, h6 + textarea,
+  h6 + input, h6 + .btn--primary, .woocommerce-variation-add-to-cart h6 + .button, h6 + textarea[type=submit],
+  h6 + input[type=submit], h6 + .btn--secondary, h6 + .out-of-stock {
     margin-top: 20px;
   }
 }
 @media (min-width: 1024px) {
-  h1 + a.btn, h1 + p, .logo h2 + p, .logo h1 + p, h2 + a.btn, h2 + p, .page section h2 + p, h3 + a.btn, .product-price + a.btn, section h2 + p + a.btn, h3 + p, .product-price + p, section h2 + p + p, .page section h2 + p + p, h4 + a.btn, h4 + p, h5 + a.btn, h5 + p, h6 + a.btn, h6 + p {
+  h1 + a.btn, .logo h2 + a.btn, .logo h1 + a.btn, h1 + p, .logo h2 + p, .logo h1 + p, h1 + textarea, .logo h2 + textarea, .logo h1 + textarea,
+  h1 + input,
+  .logo h2 + input,
+  .logo h1 + input, h1 + .btn--primary, .woocommerce-variation-add-to-cart h1 + .button, .logo h2 + .btn--primary, .logo .woocommerce-variation-add-to-cart h2 + .button, .woocommerce-variation-add-to-cart .logo h2 + .button, .logo h1 + .btn--primary, .logo .woocommerce-variation-add-to-cart h1 + .button, .woocommerce-variation-add-to-cart .logo h1 + .button, h1 + textarea[type=submit], .logo h2 + textarea[type=submit], .logo h1 + textarea[type=submit],
+  h1 + input[type=submit],
+  .logo h2 + input[type=submit],
+  .logo h1 + input[type=submit], h1 + .btn--secondary, h1 + .out-of-stock, .logo h2 + .btn--secondary, .logo h2 + .out-of-stock, .logo h1 + .btn--secondary, .logo h1 + .out-of-stock, h2 + a.btn, h2 + p, h2 + textarea,
+  h2 + input, .page section h2 + textarea,
+  .page section h2 + input, .page section h2 + p, .page section h2 + textarea,
+  .page section h2 + input, .page section h2 + textarea,
+  .page section h2 + input, .page section h2 + .btn--primary, .page section .woocommerce-variation-add-to-cart h2 + .button, .woocommerce-variation-add-to-cart .page section h2 + .button, .page section h2 + textarea[type=submit],
+  .page section h2 + input[type=submit], .page section h2 + .btn--secondary, .page section h2 + .out-of-stock, h2 + .btn--primary, .woocommerce-variation-add-to-cart h2 + .button, h2 + textarea[type=submit],
+  h2 + input[type=submit], h2 + .btn--secondary, h2 + .out-of-stock, h3 + a.btn, .comment-reply-title + a.btn, section h2 + p + a.btn, section h2 + textarea + a.btn,
+  section h2 + input + a.btn, .page section h2 + textarea + a.btn,
+  .page section h2 + input + a.btn, section h2 + .btn--primary + a.btn, section .woocommerce-variation-add-to-cart h2 + .button + a.btn, .woocommerce-variation-add-to-cart section h2 + .button + a.btn, section h2 + textarea[type=submit] + a.btn,
+  section h2 + input[type=submit] + a.btn, section h2 + .btn--secondary + a.btn, section h2 + .out-of-stock + a.btn, h3 + p, .comment-reply-title + p, h3 + textarea, .comment-reply-title + textarea,
+  h3 + input,
+  .comment-reply-title + input, section h2 + p + p, section h2 + textarea + p,
+  section h2 + input + p, .page section h2 + textarea + p,
+  .page section h2 + input + p, section h2 + p + textarea, section h2 + textarea + textarea,
+  section h2 + input + textarea, .page section h2 + textarea + textarea,
+  .page section h2 + input + textarea,
+  section h2 + p + input,
+  section h2 + textarea + input,
+  section h2 + input + input,
+  .page section h2 + textarea + input,
+  .page section h2 + input + input, .page section h2 + p + p, .page section h2 + textarea + p,
+  .page section h2 + input + p, .page section h2 + textarea + p,
+  .page section h2 + input + p, .page section h2 + p + textarea, .page section h2 + textarea + textarea,
+  .page section h2 + input + textarea, .page section h2 + textarea + textarea,
+  .page section h2 + input + textarea,
+  .page section h2 + p + input,
+  .page section h2 + textarea + input,
+  .page section h2 + input + input,
+  .page section h2 + textarea + input,
+  .page section h2 + input + input, section h2 + .btn--primary + p, section .woocommerce-variation-add-to-cart h2 + .button + p, .woocommerce-variation-add-to-cart section h2 + .button + p, section h2 + textarea[type=submit] + p,
+  section h2 + input[type=submit] + p, section h2 + .btn--primary + textarea, section .woocommerce-variation-add-to-cart h2 + .button + textarea, .woocommerce-variation-add-to-cart section h2 + .button + textarea, section h2 + textarea[type=submit] + textarea,
+  section h2 + input[type=submit] + textarea,
+  section h2 + .btn--primary + input,
+  section .woocommerce-variation-add-to-cart h2 + .button + input,
+  .woocommerce-variation-add-to-cart section h2 + .button + input,
+  section h2 + textarea[type=submit] + input,
+  section h2 + input[type=submit] + input, .page section h2 + h2.btn--primary + textarea, .page section .woocommerce-variation-add-to-cart h2 + h2.button + textarea, .woocommerce-variation-add-to-cart .page section h2 + h2.button + textarea,
+  .page section h2 + h2.btn--primary + input,
+  .page section .woocommerce-variation-add-to-cart h2 + h2.button + input,
+  .woocommerce-variation-add-to-cart .page section h2 + h2.button + input, section h2 + .btn--secondary + p, section h2 + .out-of-stock + p, section h2 + .btn--secondary + textarea, section h2 + .out-of-stock + textarea,
+  section h2 + .btn--secondary + input,
+  section h2 + .out-of-stock + input, .page section h2 + h2.btn--secondary + textarea, .page section h2 + h2.out-of-stock + textarea,
+  .page section h2 + h2.btn--secondary + input,
+  .page section h2 + h2.out-of-stock + input, h3 + .btn--primary, .comment-reply-title + .btn--primary, .woocommerce-variation-add-to-cart h3 + .button, .woocommerce-variation-add-to-cart .comment-reply-title + .button, h3 + textarea[type=submit], .comment-reply-title + textarea[type=submit],
+  h3 + input[type=submit],
+  .comment-reply-title + input[type=submit], section h2 + p + .btn--primary, section .woocommerce-variation-add-to-cart h2 + p + .button, .woocommerce-variation-add-to-cart section h2 + p + .button, section h2 + p + textarea[type=submit],
+  section h2 + p + input[type=submit], section h2 + textarea + .btn--primary, section .woocommerce-variation-add-to-cart h2 + textarea + .button, .woocommerce-variation-add-to-cart section h2 + textarea + .button, section h2 + textarea + textarea[type=submit],
+  section h2 + textarea + input[type=submit],
+  section h2 + input + .btn--primary,
+  section .woocommerce-variation-add-to-cart h2 + input + .button,
+  .woocommerce-variation-add-to-cart section h2 + input + .button,
+  section h2 + input + textarea[type=submit],
+  section h2 + input + input[type=submit], .page section h2 + textarea + .btn--primary, .page section .woocommerce-variation-add-to-cart h2 + textarea + .button, .woocommerce-variation-add-to-cart .page section h2 + textarea + .button, .page section h2 + textarea + textarea[type=submit],
+  .page section h2 + textarea + input[type=submit],
+  .page section h2 + input + .btn--primary,
+  .page section .woocommerce-variation-add-to-cart h2 + input + .button,
+  .woocommerce-variation-add-to-cart .page section h2 + input + .button,
+  .page section h2 + input + textarea[type=submit],
+  .page section h2 + input + input[type=submit], section h2 + .btn--primary + .btn--primary, section .woocommerce-variation-add-to-cart h2 + .button + .btn--primary, .woocommerce-variation-add-to-cart section h2 + .button + .btn--primary, section .woocommerce-variation-add-to-cart h2 + .btn--primary + .button, .woocommerce-variation-add-to-cart section h2 + .btn--primary + .button, section .woocommerce-variation-add-to-cart h2 + .button + .button, .woocommerce-variation-add-to-cart section h2 + .button + .button, section h2 + textarea[type=submit] + .btn--primary, section .woocommerce-variation-add-to-cart h2 + textarea[type=submit] + .button, .woocommerce-variation-add-to-cart section h2 + textarea[type=submit] + .button,
+  section h2 + input[type=submit] + .btn--primary,
+  section .woocommerce-variation-add-to-cart h2 + input[type=submit] + .button,
+  .woocommerce-variation-add-to-cart section h2 + input[type=submit] + .button, section h2 + .btn--primary + textarea[type=submit], section .woocommerce-variation-add-to-cart h2 + .button + textarea[type=submit], .woocommerce-variation-add-to-cart section h2 + .button + textarea[type=submit], section h2 + textarea[type=submit] + textarea[type=submit],
+  section h2 + input[type=submit] + textarea[type=submit],
+  section h2 + .btn--primary + input[type=submit],
+  section .woocommerce-variation-add-to-cart h2 + .button + input[type=submit],
+  .woocommerce-variation-add-to-cart section h2 + .button + input[type=submit],
+  section h2 + textarea[type=submit] + input[type=submit],
+  section h2 + input[type=submit] + input[type=submit], section h2 + .btn--secondary + .btn--primary, section h2 + .out-of-stock + .btn--primary, section .woocommerce-variation-add-to-cart h2 + .btn--secondary + .button, section .woocommerce-variation-add-to-cart h2 + .out-of-stock + .button, .woocommerce-variation-add-to-cart section h2 + .btn--secondary + .button, .woocommerce-variation-add-to-cart section h2 + .out-of-stock + .button, section h2 + .btn--secondary + textarea[type=submit], section h2 + .out-of-stock + textarea[type=submit],
+  section h2 + .btn--secondary + input[type=submit],
+  section h2 + .out-of-stock + input[type=submit], h3 + .btn--secondary, .comment-reply-title + .btn--secondary, h3 + .out-of-stock, .comment-reply-title + .out-of-stock, section h2 + p + .btn--secondary, section h2 + p + .out-of-stock, section h2 + textarea + .btn--secondary, section h2 + textarea + .out-of-stock,
+  section h2 + input + .btn--secondary,
+  section h2 + input + .out-of-stock, .page section h2 + textarea + .btn--secondary, .page section h2 + textarea + .out-of-stock,
+  .page section h2 + input + .btn--secondary,
+  .page section h2 + input + .out-of-stock, section h2 + .btn--primary + .btn--secondary, section h2 + .btn--primary + .out-of-stock, section .woocommerce-variation-add-to-cart h2 + .button + .btn--secondary, section .woocommerce-variation-add-to-cart h2 + .button + .out-of-stock, .woocommerce-variation-add-to-cart section h2 + .button + .btn--secondary, .woocommerce-variation-add-to-cart section h2 + .button + .out-of-stock, section h2 + textarea[type=submit] + .btn--secondary, section h2 + textarea[type=submit] + .out-of-stock,
+  section h2 + input[type=submit] + .btn--secondary,
+  section h2 + input[type=submit] + .out-of-stock, section h2 + .btn--secondary + .btn--secondary, section h2 + .out-of-stock + .btn--secondary, section h2 + .btn--secondary + .out-of-stock, section h2 + .out-of-stock + .out-of-stock, h4 + a.btn, ul.products h2 + a.btn, h4 + p, ul.products h2 + p, h4 + textarea, ul.products h2 + textarea,
+  h4 + input,
+  ul.products h2 + input, h4 + .btn--primary, .woocommerce-variation-add-to-cart h4 + .button, ul.products h2 + .btn--primary, ul.products .woocommerce-variation-add-to-cart h2 + .button, .woocommerce-variation-add-to-cart ul.products h2 + .button, h4 + textarea[type=submit], ul.products h2 + textarea[type=submit],
+  h4 + input[type=submit],
+  ul.products h2 + input[type=submit], h4 + .btn--secondary, h4 + .out-of-stock, ul.products h2 + .btn--secondary, ul.products h2 + .out-of-stock, h5 + a.btn, h5 + p, h5 + textarea,
+  h5 + input, h5 + .btn--primary, .woocommerce-variation-add-to-cart h5 + .button, h5 + textarea[type=submit],
+  h5 + input[type=submit], h5 + .btn--secondary, h5 + .out-of-stock, h6 + a.btn, h6 + p, h6 + textarea,
+  h6 + input, h6 + .btn--primary, .woocommerce-variation-add-to-cart h6 + .button, h6 + textarea[type=submit],
+  h6 + input[type=submit], h6 + .btn--secondary, h6 + .out-of-stock {
     margin-top: 24px;
   }
 }
 
-h3 + ul, .product-price + ul, section h2 + p + ul, .page section h2 + p + ul {
+h3 + ul, .comment-reply-title + ul, section h2 + p + ul, section h2 + textarea + ul,
+section h2 + input + ul, .page section h2 + textarea + ul,
+.page section h2 + input + ul, .page section h2 + p + ul, section h2 + .btn--primary + ul, section .woocommerce-variation-add-to-cart h2 + .button + ul, .woocommerce-variation-add-to-cart section h2 + .button + ul, section h2 + textarea[type=submit] + ul,
+section h2 + input[type=submit] + ul, section h2 + .btn--secondary + ul, section h2 + .out-of-stock + ul {
   margin-top: 16px;
 }
 @media (min-width: 768px) {
-  h3 + ul, .product-price + ul, section h2 + p + ul, .page section h2 + p + ul {
+  h3 + ul, .comment-reply-title + ul, section h2 + p + ul, section h2 + textarea + ul,
+  section h2 + input + ul, .page section h2 + textarea + ul,
+  .page section h2 + input + ul, .page section h2 + p + ul, section h2 + .btn--primary + ul, section .woocommerce-variation-add-to-cart h2 + .button + ul, .woocommerce-variation-add-to-cart section h2 + .button + ul, section h2 + textarea[type=submit] + ul,
+  section h2 + input[type=submit] + ul, section h2 + .btn--secondary + ul, section h2 + .out-of-stock + ul {
     margin-top: 20px;
   }
 }
 @media (min-width: 1024px) {
-  h3 + ul, .product-price + ul, section h2 + p + ul, .page section h2 + p + ul {
+  h3 + ul, .comment-reply-title + ul, section h2 + p + ul, section h2 + textarea + ul,
+  section h2 + input + ul, .page section h2 + textarea + ul,
+  .page section h2 + input + ul, .page section h2 + p + ul, section h2 + .btn--primary + ul, section .woocommerce-variation-add-to-cart h2 + .button + ul, .woocommerce-variation-add-to-cart section h2 + .button + ul, section h2 + textarea[type=submit] + ul,
+  section h2 + input[type=submit] + ul, section h2 + .btn--secondary + ul, section h2 + .out-of-stock + ul {
     margin-top: 24px;
   }
 }
 
-p + p, .page section h2 + p + p,
+p + p, textarea + p,
+input + p, .page section h2 + textarea + p,
+.page section h2 + input + p, p + textarea, textarea + textarea,
+input + textarea, .page section h2 + textarea + textarea,
+.page section h2 + input + textarea,
+p + input,
+textarea + input,
+input + input,
+.page section h2 + textarea + input,
+.page section h2 + input + input, .page section h2 + p + p, .page section h2 + p + textarea,
+.page section h2 + p + input, .page section h2 + .btn--primary + p, .page section .woocommerce-variation-add-to-cart h2 + .button + p, .woocommerce-variation-add-to-cart .page section h2 + .button + p, .page section h2 + textarea[type=submit] + p,
+.page section h2 + input[type=submit] + p, .page section h2 + .btn--primary + textarea, .page section .woocommerce-variation-add-to-cart h2 + .button + textarea, .woocommerce-variation-add-to-cart .page section h2 + .button + textarea, .page section h2 + textarea[type=submit] + textarea,
+.page section h2 + input[type=submit] + textarea,
+.page section h2 + .btn--primary + input,
+.page section .woocommerce-variation-add-to-cart h2 + .button + input,
+.woocommerce-variation-add-to-cart .page section h2 + .button + input,
+.page section h2 + textarea[type=submit] + input,
+.page section h2 + input[type=submit] + input, .page section h2 + .btn--secondary + p, .page section h2 + .out-of-stock + p, .page section h2 + .btn--secondary + textarea, .page section h2 + .out-of-stock + textarea,
+.page section h2 + .btn--secondary + input,
+.page section h2 + .out-of-stock + input, .btn--primary + p, .woocommerce-variation-add-to-cart .button + p, textarea[type=submit] + p,
+input[type=submit] + p, .btn--primary + textarea, .woocommerce-variation-add-to-cart .button + textarea, textarea[type=submit] + textarea,
+input[type=submit] + textarea,
+.btn--primary + input,
+.woocommerce-variation-add-to-cart .button + input,
+textarea[type=submit] + input,
+input[type=submit] + input, .page section h2.btn--primary + textarea, .page section .woocommerce-variation-add-to-cart h2.button + textarea, .woocommerce-variation-add-to-cart .page section h2.button + textarea,
+.page section h2.btn--primary + input,
+.page section .woocommerce-variation-add-to-cart h2.button + input,
+.woocommerce-variation-add-to-cart .page section h2.button + input, .page section h2.btn--primary + p, .page section .woocommerce-variation-add-to-cart h2.button + p, .woocommerce-variation-add-to-cart .page section h2.button + p, .btn--secondary + p, .out-of-stock + p, .btn--secondary + textarea, .out-of-stock + textarea,
+.btn--secondary + input,
+.out-of-stock + input, .page section h2.btn--secondary + textarea, .page section h2.out-of-stock + textarea,
+.page section h2.btn--secondary + input,
+.page section h2.out-of-stock + input, .page section h2.btn--secondary + p, .page section h2.out-of-stock + p, p + .btn--primary, .woocommerce-variation-add-to-cart p + .button, p + textarea[type=submit],
+p + input[type=submit], textarea + .btn--primary, .woocommerce-variation-add-to-cart textarea + .button, textarea + textarea[type=submit],
+textarea + input[type=submit],
+input + .btn--primary,
+.woocommerce-variation-add-to-cart input + .button,
+input + textarea[type=submit],
+input + input[type=submit], .page section h2 + textarea + .btn--primary, .page section .woocommerce-variation-add-to-cart h2 + textarea + .button, .woocommerce-variation-add-to-cart .page section h2 + textarea + .button, .page section h2 + textarea + textarea[type=submit],
+.page section h2 + textarea + input[type=submit],
+.page section h2 + input + .btn--primary,
+.page section .woocommerce-variation-add-to-cart h2 + input + .button,
+.woocommerce-variation-add-to-cart .page section h2 + input + .button,
+.page section h2 + input + textarea[type=submit],
+.page section h2 + input + input[type=submit], .page section h2 + p + .btn--primary, .page section .woocommerce-variation-add-to-cart h2 + p + .button, .woocommerce-variation-add-to-cart .page section h2 + p + .button, .page section h2 + p + textarea[type=submit],
+.page section h2 + p + input[type=submit], .btn--primary + .btn--primary, .woocommerce-variation-add-to-cart .button + .btn--primary, .woocommerce-variation-add-to-cart .btn--primary + .button, .woocommerce-variation-add-to-cart .button + .button, textarea[type=submit] + .btn--primary, .woocommerce-variation-add-to-cart textarea[type=submit] + .button,
+input[type=submit] + .btn--primary,
+.woocommerce-variation-add-to-cart input[type=submit] + .button, .btn--primary + textarea[type=submit], .woocommerce-variation-add-to-cart .button + textarea[type=submit], textarea[type=submit] + textarea[type=submit],
+input[type=submit] + textarea[type=submit],
+.btn--primary + input[type=submit],
+.woocommerce-variation-add-to-cart .button + input[type=submit],
+textarea[type=submit] + input[type=submit],
+input[type=submit] + input[type=submit], .btn--secondary + .btn--primary, .out-of-stock + .btn--primary, .woocommerce-variation-add-to-cart .btn--secondary + .button, .woocommerce-variation-add-to-cart .out-of-stock + .button, .btn--secondary + textarea[type=submit], .out-of-stock + textarea[type=submit],
+.btn--secondary + input[type=submit],
+.out-of-stock + input[type=submit], p + .btn--secondary, p + .out-of-stock, textarea + .btn--secondary, textarea + .out-of-stock,
+input + .btn--secondary,
+input + .out-of-stock, .page section h2 + textarea + .btn--secondary, .page section h2 + textarea + .out-of-stock,
+.page section h2 + input + .btn--secondary,
+.page section h2 + input + .out-of-stock, .page section h2 + p + .btn--secondary, .page section h2 + p + .out-of-stock, .btn--primary + .btn--secondary, .btn--primary + .out-of-stock, .woocommerce-variation-add-to-cart .button + .btn--secondary, .woocommerce-variation-add-to-cart .button + .out-of-stock, textarea[type=submit] + .btn--secondary, textarea[type=submit] + .out-of-stock,
+input[type=submit] + .btn--secondary,
+input[type=submit] + .out-of-stock, .btn--secondary + .btn--secondary, .out-of-stock + .btn--secondary, .btn--secondary + .out-of-stock, .out-of-stock + .out-of-stock,
 p + a,
-.page section h2 + p + a {
+textarea + a,
+input + a,
+.page section h2 + textarea + a,
+.page section h2 + input + a,
+.page section h2 + p + a,
+.page section h2 + .btn--primary + a,
+.page section .woocommerce-variation-add-to-cart h2 + .button + a,
+.woocommerce-variation-add-to-cart .page section h2 + .button + a,
+.page section h2 + textarea[type=submit] + a,
+.page section h2 + input[type=submit] + a,
+.page section h2 + .btn--secondary + a,
+.page section h2 + .out-of-stock + a,
+.btn--primary + a,
+.woocommerce-variation-add-to-cart .button + a,
+textarea[type=submit] + a,
+input[type=submit] + a,
+.btn--secondary + a,
+.out-of-stock + a {
   margin-top: 16px;
 }
 @media (min-width: 768px) {
-  p + p, .page section h2 + p + p,
+  p + p, textarea + p,
+  input + p, .page section h2 + textarea + p,
+  .page section h2 + input + p, p + textarea, textarea + textarea,
+  input + textarea, .page section h2 + textarea + textarea,
+  .page section h2 + input + textarea,
+  p + input,
+  textarea + input,
+  input + input,
+  .page section h2 + textarea + input,
+  .page section h2 + input + input, .page section h2 + p + p, .page section h2 + p + textarea,
+  .page section h2 + p + input, .page section h2 + .btn--primary + p, .page section .woocommerce-variation-add-to-cart h2 + .button + p, .woocommerce-variation-add-to-cart .page section h2 + .button + p, .page section h2 + textarea[type=submit] + p,
+  .page section h2 + input[type=submit] + p, .page section h2 + .btn--primary + textarea, .page section .woocommerce-variation-add-to-cart h2 + .button + textarea, .woocommerce-variation-add-to-cart .page section h2 + .button + textarea, .page section h2 + textarea[type=submit] + textarea,
+  .page section h2 + input[type=submit] + textarea,
+  .page section h2 + .btn--primary + input,
+  .page section .woocommerce-variation-add-to-cart h2 + .button + input,
+  .woocommerce-variation-add-to-cart .page section h2 + .button + input,
+  .page section h2 + textarea[type=submit] + input,
+  .page section h2 + input[type=submit] + input, .page section h2 + .btn--secondary + p, .page section h2 + .out-of-stock + p, .page section h2 + .btn--secondary + textarea, .page section h2 + .out-of-stock + textarea,
+  .page section h2 + .btn--secondary + input,
+  .page section h2 + .out-of-stock + input, .btn--primary + p, .woocommerce-variation-add-to-cart .button + p, textarea[type=submit] + p,
+  input[type=submit] + p, .btn--primary + textarea, .woocommerce-variation-add-to-cart .button + textarea, textarea[type=submit] + textarea,
+  input[type=submit] + textarea,
+  .btn--primary + input,
+  .woocommerce-variation-add-to-cart .button + input,
+  textarea[type=submit] + input,
+  input[type=submit] + input, .page section h2.btn--primary + textarea, .page section .woocommerce-variation-add-to-cart h2.button + textarea, .woocommerce-variation-add-to-cart .page section h2.button + textarea,
+  .page section h2.btn--primary + input,
+  .page section .woocommerce-variation-add-to-cart h2.button + input,
+  .woocommerce-variation-add-to-cart .page section h2.button + input, .page section h2.btn--primary + p, .page section .woocommerce-variation-add-to-cart h2.button + p, .woocommerce-variation-add-to-cart .page section h2.button + p, .btn--secondary + p, .out-of-stock + p, .btn--secondary + textarea, .out-of-stock + textarea,
+  .btn--secondary + input,
+  .out-of-stock + input, .page section h2.btn--secondary + textarea, .page section h2.out-of-stock + textarea,
+  .page section h2.btn--secondary + input,
+  .page section h2.out-of-stock + input, .page section h2.btn--secondary + p, .page section h2.out-of-stock + p, p + .btn--primary, .woocommerce-variation-add-to-cart p + .button, p + textarea[type=submit],
+  p + input[type=submit], textarea + .btn--primary, .woocommerce-variation-add-to-cart textarea + .button, textarea + textarea[type=submit],
+  textarea + input[type=submit],
+  input + .btn--primary,
+  .woocommerce-variation-add-to-cart input + .button,
+  input + textarea[type=submit],
+  input + input[type=submit], .page section h2 + textarea + .btn--primary, .page section .woocommerce-variation-add-to-cart h2 + textarea + .button, .woocommerce-variation-add-to-cart .page section h2 + textarea + .button, .page section h2 + textarea + textarea[type=submit],
+  .page section h2 + textarea + input[type=submit],
+  .page section h2 + input + .btn--primary,
+  .page section .woocommerce-variation-add-to-cart h2 + input + .button,
+  .woocommerce-variation-add-to-cart .page section h2 + input + .button,
+  .page section h2 + input + textarea[type=submit],
+  .page section h2 + input + input[type=submit], .page section h2 + p + .btn--primary, .page section .woocommerce-variation-add-to-cart h2 + p + .button, .woocommerce-variation-add-to-cart .page section h2 + p + .button, .page section h2 + p + textarea[type=submit],
+  .page section h2 + p + input[type=submit], .btn--primary + .btn--primary, .woocommerce-variation-add-to-cart .button + .btn--primary, .woocommerce-variation-add-to-cart .btn--primary + .button, .woocommerce-variation-add-to-cart .button + .button, textarea[type=submit] + .btn--primary, .woocommerce-variation-add-to-cart textarea[type=submit] + .button,
+  input[type=submit] + .btn--primary,
+  .woocommerce-variation-add-to-cart input[type=submit] + .button, .btn--primary + textarea[type=submit], .woocommerce-variation-add-to-cart .button + textarea[type=submit], textarea[type=submit] + textarea[type=submit],
+  input[type=submit] + textarea[type=submit],
+  .btn--primary + input[type=submit],
+  .woocommerce-variation-add-to-cart .button + input[type=submit],
+  textarea[type=submit] + input[type=submit],
+  input[type=submit] + input[type=submit], .btn--secondary + .btn--primary, .out-of-stock + .btn--primary, .woocommerce-variation-add-to-cart .btn--secondary + .button, .woocommerce-variation-add-to-cart .out-of-stock + .button, .btn--secondary + textarea[type=submit], .out-of-stock + textarea[type=submit],
+  .btn--secondary + input[type=submit],
+  .out-of-stock + input[type=submit], p + .btn--secondary, p + .out-of-stock, textarea + .btn--secondary, textarea + .out-of-stock,
+  input + .btn--secondary,
+  input + .out-of-stock, .page section h2 + textarea + .btn--secondary, .page section h2 + textarea + .out-of-stock,
+  .page section h2 + input + .btn--secondary,
+  .page section h2 + input + .out-of-stock, .page section h2 + p + .btn--secondary, .page section h2 + p + .out-of-stock, .btn--primary + .btn--secondary, .btn--primary + .out-of-stock, .woocommerce-variation-add-to-cart .button + .btn--secondary, .woocommerce-variation-add-to-cart .button + .out-of-stock, textarea[type=submit] + .btn--secondary, textarea[type=submit] + .out-of-stock,
+  input[type=submit] + .btn--secondary,
+  input[type=submit] + .out-of-stock, .btn--secondary + .btn--secondary, .out-of-stock + .btn--secondary, .btn--secondary + .out-of-stock, .out-of-stock + .out-of-stock,
   p + a,
-  .page section h2 + p + a {
+  textarea + a,
+  input + a,
+  .page section h2 + textarea + a,
+  .page section h2 + input + a,
+  .page section h2 + p + a,
+  .page section h2 + .btn--primary + a,
+  .page section .woocommerce-variation-add-to-cart h2 + .button + a,
+  .woocommerce-variation-add-to-cart .page section h2 + .button + a,
+  .page section h2 + textarea[type=submit] + a,
+  .page section h2 + input[type=submit] + a,
+  .page section h2 + .btn--secondary + a,
+  .page section h2 + .out-of-stock + a,
+  .btn--primary + a,
+  .woocommerce-variation-add-to-cart .button + a,
+  textarea[type=submit] + a,
+  input[type=submit] + a,
+  .btn--secondary + a,
+  .out-of-stock + a {
     margin-top: 20px;
   }
 }
 @media (min-width: 1024px) {
-  p + p, .page section h2 + p + p,
+  p + p, textarea + p,
+  input + p, .page section h2 + textarea + p,
+  .page section h2 + input + p, p + textarea, textarea + textarea,
+  input + textarea, .page section h2 + textarea + textarea,
+  .page section h2 + input + textarea,
+  p + input,
+  textarea + input,
+  input + input,
+  .page section h2 + textarea + input,
+  .page section h2 + input + input, .page section h2 + p + p, .page section h2 + p + textarea,
+  .page section h2 + p + input, .page section h2 + .btn--primary + p, .page section .woocommerce-variation-add-to-cart h2 + .button + p, .woocommerce-variation-add-to-cart .page section h2 + .button + p, .page section h2 + textarea[type=submit] + p,
+  .page section h2 + input[type=submit] + p, .page section h2 + .btn--primary + textarea, .page section .woocommerce-variation-add-to-cart h2 + .button + textarea, .woocommerce-variation-add-to-cart .page section h2 + .button + textarea, .page section h2 + textarea[type=submit] + textarea,
+  .page section h2 + input[type=submit] + textarea,
+  .page section h2 + .btn--primary + input,
+  .page section .woocommerce-variation-add-to-cart h2 + .button + input,
+  .woocommerce-variation-add-to-cart .page section h2 + .button + input,
+  .page section h2 + textarea[type=submit] + input,
+  .page section h2 + input[type=submit] + input, .page section h2 + .btn--secondary + p, .page section h2 + .out-of-stock + p, .page section h2 + .btn--secondary + textarea, .page section h2 + .out-of-stock + textarea,
+  .page section h2 + .btn--secondary + input,
+  .page section h2 + .out-of-stock + input, .btn--primary + p, .woocommerce-variation-add-to-cart .button + p, textarea[type=submit] + p,
+  input[type=submit] + p, .btn--primary + textarea, .woocommerce-variation-add-to-cart .button + textarea, textarea[type=submit] + textarea,
+  input[type=submit] + textarea,
+  .btn--primary + input,
+  .woocommerce-variation-add-to-cart .button + input,
+  textarea[type=submit] + input,
+  input[type=submit] + input, .page section h2.btn--primary + textarea, .page section .woocommerce-variation-add-to-cart h2.button + textarea, .woocommerce-variation-add-to-cart .page section h2.button + textarea,
+  .page section h2.btn--primary + input,
+  .page section .woocommerce-variation-add-to-cart h2.button + input,
+  .woocommerce-variation-add-to-cart .page section h2.button + input, .page section h2.btn--primary + p, .page section .woocommerce-variation-add-to-cart h2.button + p, .woocommerce-variation-add-to-cart .page section h2.button + p, .btn--secondary + p, .out-of-stock + p, .btn--secondary + textarea, .out-of-stock + textarea,
+  .btn--secondary + input,
+  .out-of-stock + input, .page section h2.btn--secondary + textarea, .page section h2.out-of-stock + textarea,
+  .page section h2.btn--secondary + input,
+  .page section h2.out-of-stock + input, .page section h2.btn--secondary + p, .page section h2.out-of-stock + p, p + .btn--primary, .woocommerce-variation-add-to-cart p + .button, p + textarea[type=submit],
+  p + input[type=submit], textarea + .btn--primary, .woocommerce-variation-add-to-cart textarea + .button, textarea + textarea[type=submit],
+  textarea + input[type=submit],
+  input + .btn--primary,
+  .woocommerce-variation-add-to-cart input + .button,
+  input + textarea[type=submit],
+  input + input[type=submit], .page section h2 + textarea + .btn--primary, .page section .woocommerce-variation-add-to-cart h2 + textarea + .button, .woocommerce-variation-add-to-cart .page section h2 + textarea + .button, .page section h2 + textarea + textarea[type=submit],
+  .page section h2 + textarea + input[type=submit],
+  .page section h2 + input + .btn--primary,
+  .page section .woocommerce-variation-add-to-cart h2 + input + .button,
+  .woocommerce-variation-add-to-cart .page section h2 + input + .button,
+  .page section h2 + input + textarea[type=submit],
+  .page section h2 + input + input[type=submit], .page section h2 + p + .btn--primary, .page section .woocommerce-variation-add-to-cart h2 + p + .button, .woocommerce-variation-add-to-cart .page section h2 + p + .button, .page section h2 + p + textarea[type=submit],
+  .page section h2 + p + input[type=submit], .btn--primary + .btn--primary, .woocommerce-variation-add-to-cart .button + .btn--primary, .woocommerce-variation-add-to-cart .btn--primary + .button, .woocommerce-variation-add-to-cart .button + .button, textarea[type=submit] + .btn--primary, .woocommerce-variation-add-to-cart textarea[type=submit] + .button,
+  input[type=submit] + .btn--primary,
+  .woocommerce-variation-add-to-cart input[type=submit] + .button, .btn--primary + textarea[type=submit], .woocommerce-variation-add-to-cart .button + textarea[type=submit], textarea[type=submit] + textarea[type=submit],
+  input[type=submit] + textarea[type=submit],
+  .btn--primary + input[type=submit],
+  .woocommerce-variation-add-to-cart .button + input[type=submit],
+  textarea[type=submit] + input[type=submit],
+  input[type=submit] + input[type=submit], .btn--secondary + .btn--primary, .out-of-stock + .btn--primary, .woocommerce-variation-add-to-cart .btn--secondary + .button, .woocommerce-variation-add-to-cart .out-of-stock + .button, .btn--secondary + textarea[type=submit], .out-of-stock + textarea[type=submit],
+  .btn--secondary + input[type=submit],
+  .out-of-stock + input[type=submit], p + .btn--secondary, p + .out-of-stock, textarea + .btn--secondary, textarea + .out-of-stock,
+  input + .btn--secondary,
+  input + .out-of-stock, .page section h2 + textarea + .btn--secondary, .page section h2 + textarea + .out-of-stock,
+  .page section h2 + input + .btn--secondary,
+  .page section h2 + input + .out-of-stock, .page section h2 + p + .btn--secondary, .page section h2 + p + .out-of-stock, .btn--primary + .btn--secondary, .btn--primary + .out-of-stock, .woocommerce-variation-add-to-cart .button + .btn--secondary, .woocommerce-variation-add-to-cart .button + .out-of-stock, textarea[type=submit] + .btn--secondary, textarea[type=submit] + .out-of-stock,
+  input[type=submit] + .btn--secondary,
+  input[type=submit] + .out-of-stock, .btn--secondary + .btn--secondary, .out-of-stock + .btn--secondary, .btn--secondary + .out-of-stock, .out-of-stock + .out-of-stock,
   p + a,
-  .page section h2 + p + a {
+  textarea + a,
+  input + a,
+  .page section h2 + textarea + a,
+  .page section h2 + input + a,
+  .page section h2 + p + a,
+  .page section h2 + .btn--primary + a,
+  .page section .woocommerce-variation-add-to-cart h2 + .button + a,
+  .woocommerce-variation-add-to-cart .page section h2 + .button + a,
+  .page section h2 + textarea[type=submit] + a,
+  .page section h2 + input[type=submit] + a,
+  .page section h2 + .btn--secondary + a,
+  .page section h2 + .out-of-stock + a,
+  .btn--primary + a,
+  .woocommerce-variation-add-to-cart .button + a,
+  textarea[type=submit] + a,
+  input[type=submit] + a,
+  .btn--secondary + a,
+  .out-of-stock + a {
     margin-top: 24px;
   }
 }
@@ -192,7 +711,10 @@ b {
 /*==========================================================
 Typography Styling
 ==========================================================*/
-h1, .logo h2, .logo h1, h2, h3, .product-price, section h2 + p, .page section h2 + p, h4, h5, h6 {
+h1, .logo h2, .logo h1, h2, h3, .comment-reply-title, section h2 + p, section h2 + textarea,
+section h2 + input, .page section h2 + textarea,
+.page section h2 + input, .page section h2 + p, .page section h2 + .btn--primary, .page section h2 + .btn--secondary, .page section h2 + .out-of-stock, section h2 + .btn--primary, section .woocommerce-variation-add-to-cart h2 + .button, .woocommerce-variation-add-to-cart section h2 + .button, section h2 + textarea[type=submit],
+section h2 + input[type=submit], section h2 + .btn--secondary, section h2 + .out-of-stock, h4, ul.products h2, h5, h6 {
   font-family: var(--font-heading);
   line-height: 1.4;
 }
@@ -202,12 +724,12 @@ h1, .logo h2, .logo h1 {
 }
 @media (min-width: 768px) {
   h1, .logo h2, .logo h1 {
-    font-size: 48px;
+    font-size: 44px;
   }
 }
 @media (min-width: 1024px) {
   h1, .logo h2, .logo h1 {
-    font-size: 64px;
+    font-size: 54px;
   }
 }
 
@@ -225,44 +747,83 @@ h2 {
   }
 }
 
-h3, .product-price, section h2 + p, .page section h2 + p, .p-lg, .btn {
+h3, .comment-reply-title, section h2 + p, section h2 + textarea,
+section h2 + input, .page section h2 + textarea,
+.page section h2 + input, .page section h2 + p, .page section h2 + .btn--primary, .page section h2 + .btn--secondary, .page section h2 + .out-of-stock, section h2 + .btn--primary, section .woocommerce-variation-add-to-cart h2 + .button, .woocommerce-variation-add-to-cart section h2 + .button, section h2 + textarea[type=submit],
+section h2 + input[type=submit], section h2 + .btn--secondary, section h2 + .out-of-stock, .p-lg, .btn {
   font-size: 20px;
 }
 @media (min-width: 768px) {
-  h3, .product-price, section h2 + p, .page section h2 + p, .p-lg, .btn {
+  h3, .comment-reply-title, section h2 + p, section h2 + textarea,
+  section h2 + input, .page section h2 + textarea,
+  .page section h2 + input, .page section h2 + p, .page section h2 + .btn--primary, .page section h2 + .btn--secondary, .page section h2 + .out-of-stock, section h2 + .btn--primary, section .woocommerce-variation-add-to-cart h2 + .button, .woocommerce-variation-add-to-cart section h2 + .button, section h2 + textarea[type=submit],
+  section h2 + input[type=submit], section h2 + .btn--secondary, section h2 + .out-of-stock, .p-lg, .btn {
     font-size: 26px;
   }
 }
 @media (min-width: 1024px) {
-  h3, .product-price, section h2 + p, .page section h2 + p, .p-lg, .btn {
+  h3, .comment-reply-title, section h2 + p, section h2 + textarea,
+  section h2 + input, .page section h2 + textarea,
+  .page section h2 + input, .page section h2 + p, .page section h2 + .btn--primary, .page section h2 + .btn--secondary, .page section h2 + .out-of-stock, section h2 + .btn--primary, section .woocommerce-variation-add-to-cart h2 + .button, .woocommerce-variation-add-to-cart section h2 + .button, section h2 + textarea[type=submit],
+  section h2 + input[type=submit], section h2 + .btn--secondary, section h2 + .out-of-stock, .p-lg, .btn {
     font-size: 32px;
   }
 }
 
-h4, p, .page section h2 + p {
+h4, ul.products h2, p, textarea,
+input, .page section h2 + textarea,
+.page section h2 + input, .page section h2 + p, .page section h2 + .btn--primary, .page section h2 + .btn--secondary, .page section h2 + .out-of-stock, .btn--primary, .woocommerce-variation-add-to-cart .button, textarea[type=submit],
+input[type=submit], .btn--secondary, .out-of-stock {
   font-size: 18px;
 }
 @media (min-width: 768px) {
-  h4, p, .page section h2 + p {
+  h4, ul.products h2, p, textarea,
+  input, .page section h2 + textarea,
+  .page section h2 + input, .page section h2 + p, .page section h2 + .btn--primary, .page section h2 + .btn--secondary, .page section h2 + .out-of-stock, .btn--primary, .woocommerce-variation-add-to-cart .button, textarea[type=submit],
+  input[type=submit], .btn--secondary, .out-of-stock {
     font-size: 20px;
   }
 }
 @media (min-width: 1024px) {
-  h4, p, .page section h2 + p {
+  h4, ul.products h2, p, textarea,
+  input, .page section h2 + textarea,
+  .page section h2 + input, .page section h2 + p, .page section h2 + .btn--primary, .page section h2 + .btn--secondary, .page section h2 + .out-of-stock, .btn--primary, .woocommerce-variation-add-to-cart .button, textarea[type=submit],
+  input[type=submit], .btn--secondary, .out-of-stock {
     font-size: 24px;
   }
 }
 
-h5, .p-sm, .error-form div:nth-of-type(8) p, .customisation-form div:nth-of-type(7) p, footer h5 + p, .variation-size a, header p, header .page section h2 + p, .page section header h2 + p {
+h5, .p-sm, ol.commentlist .comment_container .comment-text .meta .woocommerce-review__published-date, form.comment-form .comment-form-cookies-consent, form.comment-form .comment-notes, .woocommerce-noreviews, footer h5 + p, footer h5 + .btn--primary, footer .woocommerce-variation-add-to-cart h5 + .button, .woocommerce-variation-add-to-cart footer h5 + .button, footer h5 + .btn--secondary, footer h5 + .out-of-stock, footer h5 + textarea,
+footer h5 + input, footer h5 + textarea[type=submit],
+footer h5 + input[type=submit], .variation-size a, header p, header .btn--primary, header .woocommerce-variation-add-to-cart .button, .woocommerce-variation-add-to-cart header .button, header .btn--secondary, header .out-of-stock, header .page section h2 + p, .page section header h2 + p, header .page section h2 + .btn--primary, .page section header h2 + .btn--primary, header .page section h2 + .btn--secondary, header .page section h2 + .out-of-stock, .page section header h2 + .btn--secondary, .page section header h2 + .out-of-stock, header textarea,
+header input, header .page section h2 + textarea, .page section header h2 + textarea,
+header .page section h2 + input,
+.page section header h2 + input, header textarea[type=submit],
+header input[type=submit], textarea[type=number],
+input[type=number] {
   font-size: 16px;
 }
 @media (min-width: 768px) {
-  h5, .p-sm, .error-form div:nth-of-type(8) p, .customisation-form div:nth-of-type(7) p, footer h5 + p, .variation-size a, header p, header .page section h2 + p, .page section header h2 + p {
+  h5, .p-sm, ol.commentlist .comment_container .comment-text .meta .woocommerce-review__published-date, form.comment-form .comment-form-cookies-consent, form.comment-form .comment-notes, .woocommerce-noreviews, footer h5 + p, footer h5 + .btn--primary, footer .woocommerce-variation-add-to-cart h5 + .button, .woocommerce-variation-add-to-cart footer h5 + .button, footer h5 + .btn--secondary, footer h5 + .out-of-stock, footer h5 + textarea,
+  footer h5 + input, footer h5 + textarea[type=submit],
+  footer h5 + input[type=submit], .variation-size a, header p, header .btn--primary, header .woocommerce-variation-add-to-cart .button, .woocommerce-variation-add-to-cart header .button, header .btn--secondary, header .out-of-stock, header .page section h2 + p, .page section header h2 + p, header .page section h2 + .btn--primary, .page section header h2 + .btn--primary, header .page section h2 + .btn--secondary, header .page section h2 + .out-of-stock, .page section header h2 + .btn--secondary, .page section header h2 + .out-of-stock, header textarea,
+  header input, header .page section h2 + textarea, .page section header h2 + textarea,
+  header .page section h2 + input,
+  .page section header h2 + input, header textarea[type=submit],
+  header input[type=submit], textarea[type=number],
+  input[type=number] {
     font-size: 18px;
   }
 }
 @media (min-width: 1024px) {
-  h5, .p-sm, .error-form div:nth-of-type(8) p, .customisation-form div:nth-of-type(7) p, footer h5 + p, .variation-size a, header p, header .page section h2 + p, .page section header h2 + p {
+  h5, .p-sm, ol.commentlist .comment_container .comment-text .meta .woocommerce-review__published-date, form.comment-form .comment-form-cookies-consent, form.comment-form .comment-notes, .woocommerce-noreviews, footer h5 + p, footer h5 + .btn--primary, footer .woocommerce-variation-add-to-cart h5 + .button, .woocommerce-variation-add-to-cart footer h5 + .button, footer h5 + .btn--secondary, footer h5 + .out-of-stock, footer h5 + textarea,
+  footer h5 + input, footer h5 + textarea[type=submit],
+  footer h5 + input[type=submit], .variation-size a, header p, header .btn--primary, header .woocommerce-variation-add-to-cart .button, .woocommerce-variation-add-to-cart header .button, header .btn--secondary, header .out-of-stock, header .page section h2 + p, .page section header h2 + p, header .page section h2 + .btn--primary, .page section header h2 + .btn--primary, header .page section h2 + .btn--secondary, header .page section h2 + .out-of-stock, .page section header h2 + .btn--secondary, .page section header h2 + .out-of-stock, header textarea,
+  header input, header .page section h2 + textarea, .page section header h2 + textarea,
+  header .page section h2 + input,
+  .page section header h2 + input, header textarea[type=submit],
+  header input[type=submit], textarea[type=number],
+  input[type=number] {
     font-size: 20px;
   }
 }
@@ -286,27 +847,32 @@ Buttons
 *--------------------------------------------------*/
 .btn {
   display: inline-block;
+  text-transform: capitalize;
 }
-.btn--primary, .btn--secondary {
+.btn--primary, .woocommerce-variation-add-to-cart .button, textarea[type=submit],
+input[type=submit], .btn--secondary, .out-of-stock {
   padding: 8px 34px;
   border-radius: 40px;
   color: var(--light);
 }
 @media (min-width: 768px) {
-  .btn--primary, .btn--secondary {
+  .btn--primary, .woocommerce-variation-add-to-cart .button, textarea[type=submit],
+  input[type=submit], .btn--secondary, .out-of-stock {
     padding: 10px 42px;
   }
 }
 @media (min-width: 1024px) {
-  .btn--primary, .btn--secondary {
+  .btn--primary, .woocommerce-variation-add-to-cart .button, textarea[type=submit],
+  input[type=submit], .btn--secondary, .out-of-stock {
     padding: 12px 54px;
   }
 }
-.btn--primary {
+.btn--primary, .woocommerce-variation-add-to-cart .button, textarea[type=submit],
+input[type=submit] {
   background-color: var(--chestnut);
   width: auto;
 }
-.btn--secondary {
+.btn--secondary, .out-of-stock {
   background-color: var(--teal);
 }
 .btn--underline {
@@ -319,8 +885,16 @@ spacing & container
 section,
 footer > div,
 footer > div + p,
+footer > div + textarea,
+footer > div + input,
+footer > div + .btn--primary,
+.woocommerce-variation-add-to-cart footer > div + .button,
+footer > div + textarea[type=submit],
+footer > div + input[type=submit],
+footer > div + .btn--secondary,
+footer > div + .out-of-stock,
 main.pages {
-  max-width: 1320px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 32px;
 }
@@ -328,6 +902,14 @@ main.pages {
   section,
   footer > div,
   footer > div + p,
+  footer > div + textarea,
+  footer > div + input,
+  footer > div + .btn--primary,
+  .woocommerce-variation-add-to-cart footer > div + .button,
+  footer > div + textarea[type=submit],
+  footer > div + input[type=submit],
+  footer > div + .btn--secondary,
+  footer > div + .out-of-stock,
   main.pages {
     padding: 0 40px;
   }
@@ -349,24 +931,37 @@ section {
     padding-bottom: 60px;
   }
 }
+section section {
+  padding: 0;
+}
 section ul {
   margin-top: 40px;
 }
-section h2 + p, .page section h2 + p {
+section h2 + p, section h2 + textarea,
+section h2 + input, .page section h2 + textarea,
+.page section h2 + input, .page section h2 + p, .page section h2 + .btn--primary, .page section h2 + .btn--secondary, .page section h2 + .out-of-stock, section h2 + .btn--primary, section .woocommerce-variation-add-to-cart h2 + .button, .woocommerce-variation-add-to-cart section h2 + .button, section h2 + textarea[type=submit],
+section h2 + input[type=submit], section h2 + .btn--secondary, section h2 + .out-of-stock {
   margin-top: 16px;
   font-family: var(--font-body);
 }
 @media (min-width: 768px) {
-  section h2 + p, .page section h2 + p {
+  section h2 + p, section h2 + textarea,
+  section h2 + input, .page section h2 + textarea,
+  .page section h2 + input, .page section h2 + p, .page section h2 + .btn--primary, .page section h2 + .btn--secondary, .page section h2 + .out-of-stock, section h2 + .btn--primary, section .woocommerce-variation-add-to-cart h2 + .button, .woocommerce-variation-add-to-cart section h2 + .button, section h2 + textarea[type=submit],
+  section h2 + input[type=submit], section h2 + .btn--secondary, section h2 + .out-of-stock {
     margin-top: 24px;
   }
 }
 @media (min-width: 1024px) {
-  section h2 + p, .page section h2 + p {
+  section h2 + p, section h2 + textarea,
+  section h2 + input, .page section h2 + textarea,
+  .page section h2 + input, .page section h2 + p, .page section h2 + .btn--primary, .page section h2 + .btn--secondary, .page section h2 + .out-of-stock, section h2 + .btn--primary, section .woocommerce-variation-add-to-cart h2 + .button, .woocommerce-variation-add-to-cart section h2 + .button, section h2 + textarea[type=submit],
+  section h2 + input[type=submit], section h2 + .btn--secondary, section h2 + .out-of-stock {
     margin-top: 32px;
   }
 }
-section h2 + p + a.btn {
+section h2 + p + a.btn, section h2 + textarea + a.btn,
+section h2 + input + a.btn, section h2 + .btn--primary + a.btn, section .woocommerce-variation-add-to-cart h2 + .button + a.btn, .woocommerce-variation-add-to-cart section h2 + .button + a.btn, section h2 + .btn--secondary + a.btn, section h2 + .out-of-stock + a.btn {
   margin-top: 32px;
 }
 main.pages {
@@ -382,16 +977,28 @@ Forms
 form * {
   margin-top: 24px;
 }
+form * * {
+  margin-top: 0;
+}
+form * label {
+  margin-bottom: 12px;
+  display: inline-block;
+}
 
 textarea,
 input {
   display: block;
-  background-color: var(--light-gray);
-  border: 1px solid var(--chestnut);
+  background-color: var(--light);
   padding: 12px 12px;
   height: 40px;
   width: 100%;
   border-radius: 8px;
+  border: 0;
+}
+footer textarea,
+footer input {
+  border: 1px solid var(--chestnut);
+  background-color: var(--light-gray);
 }
 @media (min-width: 768px) {
   textarea,
@@ -420,7 +1027,15 @@ input[type=checkbox] {
   width: 32px;
   height: 32px;
 }
-
+textarea[type=number],
+input[type=number] {
+  padding: 4px 8px;
+  border: 1px solid var(--chestnut);
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  color: var(--chestnut);
+}
 textarea {
   min-height: 250px;
 }
@@ -432,14 +1047,22 @@ label span {
 /*-------------------------------------------------*
 Header
 *--------------------------------------------------*/
-header p, header .page section h2 + p, .page section header h2 + p {
+header p, header .btn--primary, header .woocommerce-variation-add-to-cart .button, .woocommerce-variation-add-to-cart header .button, header .btn--secondary, header .out-of-stock, header .page section h2 + p, .page section header h2 + p, header .page section h2 + .btn--primary, .page section header h2 + .btn--primary, header .page section h2 + .btn--secondary, header .page section h2 + .out-of-stock, .page section header h2 + .btn--secondary, .page section header h2 + .out-of-stock, header textarea,
+header input, header .page section h2 + textarea, .page section header h2 + textarea,
+header .page section h2 + input,
+.page section header h2 + input, header textarea[type=submit],
+header input[type=submit] {
   background-color: var(--chestnut);
   color: var(--light);
   text-align: center;
   padding: 8px 32px;
 }
 @media (min-width: 768px) {
-  header p, header .page section h2 + p, .page section header h2 + p {
+  header p, header .btn--primary, header .woocommerce-variation-add-to-cart .button, .woocommerce-variation-add-to-cart header .button, header .btn--secondary, header .out-of-stock, header .page section h2 + p, .page section header h2 + p, header .page section h2 + .btn--primary, .page section header h2 + .btn--primary, header .page section h2 + .btn--secondary, header .page section h2 + .out-of-stock, .page section header h2 + .btn--secondary, .page section header h2 + .out-of-stock, header textarea,
+  header input, header .page section h2 + textarea, .page section header h2 + textarea,
+  header .page section h2 + input,
+  .page section header h2 + input, header textarea[type=submit],
+  header input[type=submit] {
     padding: 8px 40px;
   }
 }
@@ -657,7 +1280,9 @@ footer .logo {
   font-family: var(--font-logo);
   margin-top: 24px;
 }
-.logo + p, .page section h2.logo + p {
+.logo + p, .logo + .btn--primary, .woocommerce-variation-add-to-cart .logo + .button, .logo + .btn--secondary, .logo + .out-of-stock, .page section h2.logo + p, .logo + textarea,
+.logo + input, .page section h2.logo + textarea,
+.page section h2.logo + input {
   margin-top: 24px;
 }
 
@@ -691,35 +1316,34 @@ main > img {
 /*-------------------------------------------------*
 Featured Products
 *--------------------------------------------------*/
-ul.product-list {
+ul.products {
   display: grid;
   gap: 40px;
 }
 @media (min-width: 768px) {
-  ul.product-list {
+  ul.products {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 1024px) {
-  ul.product-list {
+  ul.products {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-ul.product-list figure {
+ul.products .product .button {
+  display: none;
+}
+ul.products .product-img {
   position: relative;
 }
-ul.product-list figure .variation-color {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-}
-ul.product-list figure:before {
-  padding-bottom: 120%;
+ul.products .product-img:before {
+  padding-bottom: 125%;
   width: 100%;
   content: "";
   display: block;
+  overflow: hidden;
 }
-ul.product-list figure img {
+ul.products .product-img img {
   position: absolute;
   left: 0;
   top: 0;
@@ -728,14 +1352,24 @@ ul.product-list figure img {
   -o-object-position: center;
      object-position: center;
 }
-ul.product-list h4 {
+ul.products .woocommerce-LoopProduct-link .button {
+  display: none !important;
+}
+ul.products .variation-color {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+ul.products h2 {
   margin-top: 20px;
 }
-ul.product-list h4 + p {
+ul.products .price {
   font-family: var(--font-heading);
   margin-top: 8px;
+  display: inline-block;
+  margin-top: 4px;
 }
-ul.product-list + div {
+ul.products + div {
   margin-top: 60px;
   text-align: center;
 }
@@ -896,17 +1530,29 @@ footer > div + div {
     grid-area: 1/1/2/3;
   }
 }
-footer > div + div div p + ul, footer > div + div div .page section h2 + p + ul, .page section footer > div + div div h2 + p + ul {
+footer > div + div div p + ul, footer > div + div div .btn--primary + ul, footer > div + div div .woocommerce-variation-add-to-cart .button + ul, .woocommerce-variation-add-to-cart footer > div + div div .button + ul, footer > div + div div .btn--secondary + ul, footer > div + div div .out-of-stock + ul, footer > div + div div .page section h2 + p + ul, .page section footer > div + div div h2 + p + ul, footer > div + div div textarea + ul,
+footer > div + div div input + ul, footer > div + div div .page section h2 + textarea + ul, .page section footer > div + div div h2 + textarea + ul,
+footer > div + div div .page section h2 + input + ul,
+.page section footer > div + div div h2 + input + ul, footer > div + div div textarea[type=submit] + ul,
+footer > div + div div input[type=submit] + ul {
   display: flex;
   gap: 24px;
   align-items: center;
   padding: 0;
   margin: 24px 0 0;
 }
-footer > div + div div p + ul li, footer > div + div div .page section h2 + p + ul li, .page section footer > div + div div h2 + p + ul li {
+footer > div + div div p + ul li, footer > div + div div .btn--primary + ul li, footer > div + div div .woocommerce-variation-add-to-cart .button + ul li, .woocommerce-variation-add-to-cart footer > div + div div .button + ul li, footer > div + div div .btn--secondary + ul li, footer > div + div div .out-of-stock + ul li, footer > div + div div .page section h2 + p + ul li, .page section footer > div + div div h2 + p + ul li, footer > div + div div textarea + ul li,
+footer > div + div div input + ul li, footer > div + div div .page section h2 + textarea + ul li, .page section footer > div + div div h2 + textarea + ul li,
+footer > div + div div .page section h2 + input + ul li,
+.page section footer > div + div div h2 + input + ul li, footer > div + div div textarea[type=submit] + ul li,
+footer > div + div div input[type=submit] + ul li {
   margin: 0;
 }
-footer > div + div div p + ul svg, footer > div + div div .page section h2 + p + ul svg, .page section footer > div + div div h2 + p + ul svg {
+footer > div + div div p + ul svg, footer > div + div div .btn--primary + ul svg, footer > div + div div .woocommerce-variation-add-to-cart .button + ul svg, .woocommerce-variation-add-to-cart footer > div + div div .button + ul svg, footer > div + div div .btn--secondary + ul svg, footer > div + div div .out-of-stock + ul svg, footer > div + div div .page section h2 + p + ul svg, .page section footer > div + div div h2 + p + ul svg, footer > div + div div textarea + ul svg,
+footer > div + div div input + ul svg, footer > div + div div .page section h2 + textarea + ul svg, .page section footer > div + div div h2 + textarea + ul svg,
+footer > div + div div .page section h2 + input + ul svg,
+.page section footer > div + div div h2 + input + ul svg, footer > div + div div textarea[type=submit] + ul svg,
+footer > div + div div input[type=submit] + ul svg {
   fill: var(--chestnut);
 }
 @media (min-width: 768px) {
@@ -940,9 +1586,11 @@ footer > div + div div p + ul svg, footer > div + div div .page section h2 + p +
   }
 }
 footer > div + div div.subscribe-form #mc-embedded-subscribe {
-  margin-top: 0;
+  margin-top: 24px;
 }
-footer > div + div + p {
+footer > div + div + p, footer > div + div + .btn--primary, .woocommerce-variation-add-to-cart footer > div + div + .button, footer > div + div + .btn--secondary, footer > div + div + .out-of-stock, footer > div + div + textarea,
+footer > div + div + input, footer > div + div + textarea[type=submit],
+footer > div + div + input[type=submit] {
   padding: 24px 0;
   border-top: 1px solid var(--chestnut);
   text-align: center;
@@ -950,12 +1598,16 @@ footer > div + div + p {
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
-  footer > div + div + p {
+  footer > div + div + p, footer > div + div + .btn--primary, .woocommerce-variation-add-to-cart footer > div + div + .button, footer > div + div + .btn--secondary, footer > div + div + .out-of-stock, footer > div + div + textarea,
+  footer > div + div + input, footer > div + div + textarea[type=submit],
+  footer > div + div + input[type=submit] {
     padding: 32px 0;
   }
 }
 @media (min-width: 1024px) {
-  footer > div + div + p {
+  footer > div + div + p, footer > div + div + .btn--primary, .woocommerce-variation-add-to-cart footer > div + div + .button, footer > div + div + .btn--secondary, footer > div + div + .out-of-stock, footer > div + div + textarea,
+  footer > div + div + input, footer > div + div + textarea[type=submit],
+  footer > div + div + input[type=submit] {
     padding: 40px 0;
   }
 }
@@ -970,235 +1622,299 @@ footer ul li + li {
 /*-------------------------------------------------*
 Product Page
 *--------------------------------------------------*/
-.pages > div + div {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-.pages div h3, .pages div .product-price, .pages div section h2 + p, section .pages div h2 + p {
-  max-width: 960px;
-}
-
-.product {
+.product-page-content > .product {
   display: grid;
-  gap: 40px;
   grid-template-columns: repeat(2, 1fr);
-  padding-bottom: 60px;
+  gap: 40px;
 }
-.product img {
-  width: 100%;
+.product-page-content > .product .woocommerce-product-gallery {
+  grid-area: 1/1/2/2;
 }
-.product-review {
-  display: flex;
-  gap: 24px;
+.product-page-content > .product .woocommerce-product-gallery .woocommerce-product-gallery__image img {
+  min-height: 80vh;
 }
-.product-review a {
-  text-decoration: underline;
+.product-page-content > .product .summary {
+  grid-area: 1/2/2/3;
 }
-.product-price {
-  font-weight: 500;
-  margin-top: 20px;
+.product-page-content > .product .maker-block {
+  grid-area: 2/1/3/3;
 }
-.product div + div {
-  margin-top: 40px;
+.product-page-content > .product .woocommerce-Reviews {
+  grid-area: 3/1/3/3;
 }
-.product .variation-color span {
-  width: 32px;
-  height: 32px;
-  opacity: 0.6;
-  position: relative;
-}
-.product .variation-color span::after {
-  position: absolute;
-  content: "";
-  width: calc(100% + 6px);
-  height: calc(100% + 6px);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-}
-.product .variation-color span.selected {
-  opacity: 1;
-}
-.product .variation-color span.selected::after {
-  border: 1px solid var(--chestnut);
-}
-.product div div p {
-  text-decoration: underline;
-  margin-top: 20px;
-}
-.product .product-description {
-  margin-top: 60px;
-  padding-top: 40px;
-  border-top: 2px solid var(--chestnut);
-}
-.product .product-description span {
-  font-weight: 500;
-}
-.product .product-description ul {
-  margin-top: 20px;
-}
-.product .product-description ul li + li {
-  margin-top: 10px;
-}
-
-.variation {
-  display: flex;
-  gap: 12px;
-  font-weight: 500;
-  margin-top: 20px;
+.product-page-content > .product .related {
+  grid-area: 4/1/4/3;
 }
 
 .maker {
   display: flow-root;
   max-width: 1100px;
+  margin-top: 40px;
+  text-transform: capitalize;
+}
+.maker-block {
+  padding: 20px 0;
+}
+@media (min-width: 768px) {
+  .maker-block {
+    padding: 40px 0;
+  }
+}
+@media (min-width: 1024px) {
+  .maker-block {
+    padding: 60px 0;
+  }
 }
 .maker img {
   float: left;
   margin-right: 40px;
+  max-width: 240px;
 }
-.maker * {
+
+/*-------------------------------------------------*
+Woocommerce Stylings
+*--------------------------------------------------*/
+.woocommerce-variation-add-to-cart {
+  display: flex;
+  align-items: center;
+}
+.woocommerce-variation-add-to-cart .button {
+  border: 0;
+  margin-left: 24px;
+}
+
+.out-of-stock {
+  display: inline-block;
+}
+
+.product_meta {
   margin-top: 24px;
 }
 
-.review form {
-  margin-top: 120px;
-  max-width: 1100px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 40px;
-}
-.review form h2 {
-  grid-area: 1/1/2/3;
-}
-.review form div {
-  grid-area: 2/1/3/2;
-}
-.review form div + div {
-  grid-area: 2/2/3/3;
-}
-.review form div + div + div {
-  grid-area: 3/1/4/3;
-}
-.review form div + div + div + div {
-  grid-area: 4/1/5/3;
+.woocommerce-variation {
+  margin-bottom: 24px;
 }
 
-.customisation-form {
-  margin-bottom: 120px;
-  max-width: 1100px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px 40px;
+/**
+ * Star rating
+ */
+.star-rating {
+  overflow: hidden;
+  position: relative;
+  height: 1.618em;
+  line-height: 1.618;
+  font-size: 12px;
+  width: 5.3em;
+  font-family: "star";
+  font-weight: 400;
 }
-.customisation-form div:nth-of-type(1) {
-  grid-area: 1/1/2/2;
+@media (min-width: 768px) {
+  .star-rating {
+    font-size: 16px;
+  }
 }
-.customisation-form div:nth-of-type(2) {
-  grid-area: 1/2/2/3;
+@media (min-width: 1024px) {
+  .star-rating {
+    font-size: 24px;
+  }
 }
-.customisation-form div:nth-of-type(3) {
-  grid-area: 2/1/3/2;
+.star-rating:before {
+  content: "SSSSS";
+  opacity: 0.25;
+  float: left;
+  top: 0;
+  left: 0;
+  position: absolute;
 }
-.customisation-form div:nth-of-type(4) {
-  grid-area: 2/2/3/3;
+.star-rating span {
+  overflow: hidden;
+  float: left;
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding-top: 1.5em;
 }
-.customisation-form div:nth-of-type(5) {
-  grid-area: 3/1/4/3;
-}
-.customisation-form div:nth-of-type(6) {
-  grid-area: 4/1/5/3;
-}
-.customisation-form div:nth-of-type(6) div {
-  display: flex;
-  gap: 40px;
-}
-.customisation-form div:nth-of-type(6) div * {
-  margin-top: 0;
-}
-.customisation-form div:nth-of-type(6) div div {
-  gap: 12px;
-}
-.customisation-form textarea {
-  grid-area: 5/1/6/3;
-}
-.customisation-form div:nth-of-type(7) {
-  grid-area: 6/1/7/3;
-}
-.customisation-form div:nth-of-type(7) * {
-  margin-top: 0;
-}
-.customisation-form div:nth-of-type(7) img {
-  width: 100px;
-  height: 100px;
-  border-radius: 8px;
-}
-.customisation-form div:nth-of-type(7) p {
-  text-decoration: underline;
-  margin: 12px 0 24px 0;
-  text-underline-offset: 4px;
-}
-.customisation-form div:nth-of-type(8) {
-  grid-area: 7/1/8/3;
+.star-rating span:before {
+  content: "SSSSS";
+  top: 0;
+  position: absolute;
+  left: 0;
+  color: var(--chestnut);
 }
 
-.error-form {
-  margin-bottom: 120px;
-  max-width: 1100px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px 40px;
+p.stars a, .stars.btn--primary a, .stars.btn--secondary a, .page section h2 + p.stars a, textarea.stars a,
+input.stars a, .page section h2 + textarea.stars a,
+.page section h2 + input.stars a, .woocommerce-variation-add-to-cart .stars.button a, .stars.out-of-stock a {
+  position: relative;
+  height: 1em;
+  width: 1em;
+  text-indent: -999em;
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 1px;
+  font-weight: 400;
 }
-.error-form div:nth-of-type(1) {
-  grid-area: 1/1/2/2;
+p.stars a:before, .stars.btn--primary a:before, .stars.btn--secondary a:before, textarea.stars a:before,
+input.stars a:before, .woocommerce-variation-add-to-cart .stars.button a:before, .stars.out-of-stock a:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  font-family: "star";
+  content: "S";
+  color: var(--green);
+  text-indent: 0;
+  opacity: 0.25;
 }
-.error-form div:nth-of-type(2) {
-  grid-area: 2/1/3/2;
+p.stars a:hover ~ a:before, .stars.btn--primary a:hover ~ a:before, .stars.btn--secondary a:hover ~ a:before, textarea.stars a:hover ~ a:before,
+input.stars a:hover ~ a:before, .woocommerce-variation-add-to-cart .stars.button a:hover ~ a:before, .stars.out-of-stock a:hover ~ a:before {
+  content: "S";
+  color: var(--green);
+  opacity: 0.25;
 }
-.error-form div:nth-of-type(3) {
-  grid-area: 2/2/3/3;
+p.stars:hover a:before, .stars.btn--primary:hover a:before, .stars.btn--secondary:hover a:before, textarea.stars:hover a:before,
+input.stars:hover a:before, .woocommerce-variation-add-to-cart .stars.button:hover a:before, .stars.out-of-stock:hover a:before {
+  content: "S";
+  color: var(--chestnut);
+  opacity: 1;
 }
-.error-form div:nth-of-type(4) {
-  grid-area: 3/1/4/2;
+p.stars.selected a:not(.active):before, .stars.selected.btn--primary a:not(.active):before, .stars.selected.btn--secondary a:not(.active):before, textarea.stars.selected a:not(.active):before,
+input.stars.selected a:not(.active):before, .woocommerce-variation-add-to-cart .stars.selected.button a:not(.active):before, .stars.selected.out-of-stock a:not(.active):before {
+  content: "S";
+  color: var(--chestnut);
+  opacity: 1;
 }
-.error-form div:nth-of-type(5) {
-  grid-area: 3/2/4/3;
+p.stars.selected a.active:before, .stars.selected.btn--primary a.active:before, .stars.selected.btn--secondary a.active:before, textarea.stars.selected a.active:before,
+input.stars.selected a.active:before, .woocommerce-variation-add-to-cart .stars.selected.button a.active:before, .stars.selected.out-of-stock a.active:before {
+  content: "S";
+  color: var(--chestnut);
+  opacity: 1;
 }
-.error-form div:nth-of-type(6) {
-  grid-area: 4/1/5/3;
+p.stars.selected a.active ~ a:before, .stars.selected.btn--primary a.active ~ a:before, .stars.selected.btn--secondary a.active ~ a:before, textarea.stars.selected a.active ~ a:before,
+input.stars.selected a.active ~ a:before, .woocommerce-variation-add-to-cart .stars.selected.button a.active ~ a:before, .stars.selected.out-of-stock a.active ~ a:before {
+  content: "S";
+  color: var(--green);
+  opacity: 0.25;
 }
-.error-form div:nth-of-type(7) {
-  grid-area: 5/1/6/3;
+
+/*-------------------------------------------------*
+Review Section
+*--------------------------------------------------*/
+.woocommerce-Reviews {
+  max-width: 940px;
 }
-.error-form div:nth-of-type(7) div {
+
+.related,
+.woocommerce-Reviews {
+  padding: 20px 0;
+}
+@media (min-width: 768px) {
+  .related,
+  .woocommerce-Reviews {
+    padding: 40px 0;
+  }
+}
+
+.woocommerce-noreviews {
+  opacity: 0.8;
+  font-style: italic;
+}
+
+form.comment-form {
   display: flex;
-  gap: 40px;
+  gap: 24px;
+  flex-wrap: wrap;
 }
-.error-form div:nth-of-type(7) div * {
+form.comment-form * {
   margin-top: 0;
 }
-.error-form div:nth-of-type(7) div div {
+form.comment-form .comment-notes,
+form.comment-form .comment-form-rating,
+form.comment-form .comment-form-comment,
+form.comment-form .comment-form-cookies-consent {
+  flex: 0 0 100%;
+}
+form.comment-form .comment-form-author,
+form.comment-form .comment-form-email {
+  flex: 0 0 50%;
+  max-width: calc(50% - 20px);
+}
+form.comment-form .comment-notes {
+  order: 0;
+  font-style: italic;
+  margin-top: 12px;
+}
+form.comment-form .comment-form-rating {
+  order: 3;
+}
+form.comment-form .comment-form-comment {
+  order: 4;
+}
+form.comment-form .comment-form-author {
+  order: 1;
+}
+form.comment-form .comment-form-email {
+  order: 2;
+}
+form.comment-form .comment-form-cookies-consent {
+  order: 5;
+  display: flex;
+  align-items: flex-start;
   gap: 12px;
 }
-.error-form textarea {
-  grid-area: 6/1/7/3;
+form.comment-form .form-submit {
+  order: 6;
 }
-.error-form div:nth-of-type(8) {
-  grid-area: 7/1/8/3;
+
+ol.commentlist {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 0;
 }
-.error-form div:nth-of-type(8) * {
-  margin-top: 0;
+ol.commentlist li {
+  border-bottom: 1px solid var(--light-gray);
+  padding-bottom: 40px;
 }
-.error-form div:nth-of-type(8) img {
-  width: 100px;
-  height: 100px;
-  border-radius: 8px;
+ol.commentlist li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0px;
 }
-.error-form div:nth-of-type(8) p {
-  text-decoration: underline;
-  margin: 12px 0 24px 0;
-  text-underline-offset: 4px;
+ol.commentlist .comment_container {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
 }
-.error-form div:nth-of-type(9) {
-  grid-area: 8/1/9/3;
+ol.commentlist .comment_container img {
+  width: 80px;
+  height: 80px;
+}
+ol.commentlist .comment_container .comment-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+ol.commentlist .comment_container .comment-text .star-rating {
+  order: 1;
+}
+ol.commentlist .comment_container .comment-text .meta {
+  order: 0;
+}
+ol.commentlist .comment_container .comment-text .meta .woocommerce-review__author {
+  text-transform: capitalize;
+}
+ol.commentlist .comment_container .comment-text .description {
+  order: 2;
+}
+
+#comments {
+  margin-bottom: 60px;
+}
+
+.comment-reply-title {
+  margin-bottom: 12px;
+  display: inline-block;
 }/*# sourceMappingURL=style.css.map */

@@ -68,9 +68,9 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/blocks/category-list' );
 }
 
-# ------------------------------------------
-# Editing Woocommerce PLugin
-# ------------------------------------------
+/**
+ * Load WooCommerce compatibility file.
+ */
 
-// require get_template_directory() . '/inc/woocommerce/woocommerce.php';
+require get_template_directory() . '/inc/woocommerce/woocommerce.php';
 // require get_template_directory() . '/inc/woocommerce/woocommerce-functions.php';
