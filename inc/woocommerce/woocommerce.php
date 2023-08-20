@@ -158,11 +158,13 @@ function shoptimizer_maker_name_field() { ?>
 		<?php if( $image ) {?>
 			<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 		<?php } ?>
-			<h2><?php the_field('maker_name'); ?></h2>
-			<p><?php the_field('maker_description'); ?></p>
-			<a href="<?php the_field('maker_profile'); ?>" class="btn btn--primary">
-			<?php the_field('maker_name'); ?>'s Profile
-			</a>
+			<div>
+				<h3><?php the_field('maker_name'); ?></h3>
+				<p><?php the_field('maker_description'); ?></p>
+				<a href="<?php the_field('maker_profile'); ?>" class="btn btn--primary">
+				<?php the_field('maker_name'); ?>'s Profile
+				</a>
+			</div>
 		</div>
 	</div>
 <?php }
