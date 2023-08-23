@@ -73,4 +73,3 @@ function register_acf_blocks() {
  */
 
 require get_template_directory() . '/inc/woocommerce/woocommerce.php';
-// require get_template_directory() . '/inc/woocommerce/woocommerce-functions.php';
