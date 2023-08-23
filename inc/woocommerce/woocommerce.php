@@ -149,7 +149,8 @@ add_action( 'woocommerce_single_product_summary', 'product_description', 12 );
 add_action( 'woocommerce_product_tabs', 'shoptimizer_maker_name_field', 9 );
   
 function shoptimizer_maker_name_field() { ?>
-<?php if(get_field('maker_name')) { 
+
+<?php if(get_field('maker_image') || the_field('maker_description')) { 
 	 $image = get_field('maker_image');
 	 ?>
 	<div class="maker-block">
@@ -198,3 +199,58 @@ function woo_remove_product_tabs( $tabs )
  */
 add_filter( 'wc_product_sku_enabled', '__return_false' );
 
+
+/**
+ * add customisation button in product page
+ *
+ */
+add_action( 'woocommerce_after_add_to_cart_button', 'cutomisation_btn', 9 );
+  
+function cutomisation_btn() { ?>
+<a class="btn btn--secondary product-customise-btn" href="google.com">Customise</a>
+<?php
+}
+
+// Hide trailing zeros on prices.
+add_filter( 'woocommerce_price_trim_zeros', 'wc_hide_trailing_zeros', 10, 1 );
+function wc_hide_trailing_zeros( $trim ) {
+    // set to false to show trailing zeros
+    return true;
+}
+
+/**
+ * add title
+ *
+ */
+add_action( 'woocommerce_single_product_summary', 'product_detail_title', 39 );
+  
+function product_detail_title() { ?>
+	<?php { ?>
+		<h3 class="description-title"> Description </h3>
+	<?php } ?>
+<?php
+}
+
+/**
+ * add product detail like material used and creator in product page
+ *
+ */
+add_action( 'woocommerce_single_product_summary', 'product_detail', 99 );
+  
+function product_detail() {?>
+<ul class="description-list">
+	<?php if(get_field('material')) { ?><li><span> Materials: </span><?php if(get_field('material')) the_field('material'); ?> </li> <?php } ?>
+	<?php if(get_field('maker_name')) { ?><li><span>Creator: </span><?php if(get_field('maker_name')) the_field('maker_name'); ?> </li> <?php } ?>
+</ul>
+<?php }
+
+/**
+ * change out of stock text
+ *
+ */
+
+function out_of_stock_message( $text ){
+$text = 'Out of Stock';
+return $text;
+}
+add_filter( 'woocommerce_out_of_stock_message', 'out_of_stock_message', 999);
