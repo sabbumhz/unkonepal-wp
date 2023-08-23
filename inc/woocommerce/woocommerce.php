@@ -11,12 +11,15 @@
  * WooCommerce setup function.
  *
  * @link https://docs.woocommerce.com/document/third-party-custom-theme-compatibility/
- * @link https://github.com/woocommerce/woocommerce/wiki/Enabling-product-gallery-features-(zoom,-swipe,-lightbox)-in-3.0.0
  *
  * @return void
  */
+
 function unkonepal_woocommerce_setup() {
 	add_theme_support( 'woocommerce' );
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
 }
 add_action( 'after_setup_theme', 'unkonepal_woocommerce_setup' );
 
@@ -204,6 +207,7 @@ add_filter( 'wc_product_sku_enabled', '__return_false' );
  * add customisation button in product page
  *
  */
+
 add_action( 'woocommerce_after_add_to_cart_button', 'cutomisation_btn', 9 );
   
 function cutomisation_btn() { ?>
@@ -211,12 +215,24 @@ function cutomisation_btn() { ?>
 <?php
 }
 
-// Hide trailing zeros on prices.
-add_filter( 'woocommerce_price_trim_zeros', 'wc_hide_trailing_zeros', 10, 1 );
-function wc_hide_trailing_zeros( $trim ) {
-    // set to false to show trailing zeros
-    return true;
+/* Show contact form instead of "Out Of Stock" message */
+
+add_action('woocommerce_single_product_summary', 'customisation_btn_outofstock', 32);
+function customisation_btn_outofstock() {
+    global $product;
+    if(!$product->is_in_stock( )) {
+        echo  '<a class="btn btn--secondary product-customise-btn" href="google.com">Customise</a>';
+    }
 }
+
+// add_filter( 'woocommerce_available_variation', 'variation_out_of_stock_show_form', 10, 3 );
+// function variation_out_of_stock_show_form( $data, $product, $variation ) {
+//     if( ! $data['is_in_stock'] )
+//     {
+// 		echo  '<a class="btn btn--secondary product-customise-btn" href="google.com">Customise</a>';
+//     }
+//     return $data;
+// }
 
 /**
  * add title
