@@ -270,3 +270,35 @@ $text = 'Out of Stock';
 return $text;
 }
 add_filter( 'woocommerce_out_of_stock_message', 'out_of_stock_message', 999);
+
+/**
+ * Collection page remove wrapper
+ *
+ */
+
+ // Hook after `WC_Shortcodes::init()` is executed.
+add_action( 'init', function(){
+    // Remove the shortcode.
+    remove_shortcode( 'product_categories' );
+
+    // Add it back, but using our callback.
+    add_shortcode( 'product_categories', 'my_product_categories_shortcode' );
+}, 11 );
+
+ function my_product_categories_shortcode( $atts ) {
+    $out = WC_Shortcodes::product_categories( $atts );
+
+    // Modify the wrapper's opening tag.
+    if ( ! empty( $atts['class'] ) ) {
+        $columns = isset( $atts['columns'] ) ?
+            absint( $atts['columns'] ) : 4;
+
+        $out = str_replace(
+            '<div class="woocommerce test columns-' . $columns . '">',
+            '<div class="woocommerce test columns-' . $columns . ' ' . esc_attr( $atts['class'] ) . '">',
+            $out
+        );
+    }
+
+    return $out;
+}

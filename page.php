@@ -6,8 +6,15 @@
 	?>
 	<img src=' <?php echo $feat_image ?>'>
 	<?php } ?>
-	<section>
-		<?php the_content(); ?>
-	<section>
+
+	<?php if ( is_home() || is_front_page() ){
+		the_content();
+		}else{
+			?><section>
+				<?php the_content(); ?>
+			</section>
+		<?php }?>
+
+	
 
 <?php get_footer(); ?>

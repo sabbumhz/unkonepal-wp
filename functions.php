@@ -73,3 +73,25 @@ function register_acf_blocks() {
  */
 
 require get_template_directory() . '/inc/woocommerce/woocommerce.php';
+
+/**
+ * Custom post type
+ */
+
+ function create_knitter_post_type() {
+    register_post_type( 'knitters',
+    array(
+    'labels' => array(
+    'name' => __( 'Knitters' ),
+    'singular_name' => __( 'Knitter' )
+    ),
+    
+    'public' => true,
+    'has_archive' => true,
+    'menu_icon' => 'dashicons-admin-post',
+    'supports' => array( 'title', 'editor', 'thumbnail' )
+    )
+    );
+    }
+    add_action( 'init', 'create_knitter_post_type' );
+

@@ -219,7 +219,7 @@ h3,.p-lg,.btn{
 
 h4,p{
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.8;
     @media (min-width: 768px) {
         font-size: 18px;
     }
@@ -230,7 +230,7 @@ h4,p{
 
 h5,.p-sm{
     font-size: 14px;
-    line-height: 1.2;
+    line-height: 1.5;
     @media (min-width: 768px) {
         font-size: 16px;
     }
@@ -299,6 +299,11 @@ main.pages{
         padding: 0 40px;
     }
 }
+
+// .home main section{
+//     max-width: 100%;
+//     padding: 0;
+// }
 
 section{
     padding-top: 32px;
@@ -2069,6 +2074,58 @@ table.shop_table_responsive tr td.download-actions .button {
     &.woocommerce-cart{
         .woocommerce{
             display: block;
+        }
+    }
+}
+
+/*-------------------------------------------------*
+Knitters Page and List
+*--------------------------------------------------*/
+.knitters-list{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    @media (min-width: 568px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+    h3{
+        text-transform:capitalize;
+        margin-top: 12px;
+        & + p{
+            margin-top: 8px;
+        }
+    }
+    a.btn{
+        margin-top: 12px;
+    }
+}
+
+.single-knitters{
+    section{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px;
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        @media (min-width: 1024px) {
+            gap: 40px;
+        }
+        figure{
+            @media (min-width: 768px) {
+                grid-area: 1 / 1 / 1 / 1; 
+            }
+        }
+        div {
+            @media (min-width: 768px) {
+                grid-area: 1 / 2 / 1 / 4; 
+            }
         }
     }
 }
