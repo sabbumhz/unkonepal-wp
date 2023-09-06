@@ -1,9 +1,17 @@
 <?php get_header(); ?>
 <!-- content START -->
-<div id="content">
-	<article>		<h2>Not Found (error 404)</h2>		<p>Sorry, but you are looking for something that isn't here.</p>		<?php include (TEMPLATEPATH . "/searchform.php"); ?>	</article>
-</div>
+<section class="error-block">
+	<div>
+		<div>
+			<h2>Error 404!</h2>
+			<p>Threads are Tied! Search for other keywords to find your results. </p>
+			<?php include (TEMPLATEPATH . "/searchform.php"); ?>
+			<br>
+			<p>OR</p>
+			<a class="btn btn--primary" href="/index.php">Homepage</a>
+		</div>
+	</div>
+</section>
 <!-- content END -->
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

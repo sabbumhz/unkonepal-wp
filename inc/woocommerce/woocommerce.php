@@ -29,8 +29,7 @@ add_action( 'after_setup_theme', 'unkonepal_woocommerce_setup' );
  * @return void
  */
 function unkonepal_woocommerce_scripts() {
-	wp_enqueue_style( 'unkonepal-woocommerce-style', get_template_directory_uri() . '/inc/woocommerce/woocommerce.css' );
-
+	wp_enqueue_style( 'unkonepal-woocommerce-style', get_template_directory_uri() . 'style.css' );
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
 	$inline_font = '@font-face {
 			font-family: "star";

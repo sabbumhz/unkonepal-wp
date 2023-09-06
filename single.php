@@ -1,8 +1,9 @@
-<?php get_header(); ?><!-- content START --><div id="content">
+<?php get_header(); ?>
 
+<!-- content START -->
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<article>
+		<section>
 			<h2><?php the_title(); ?></h2>
 			<?php
 				the_content();
@@ -22,10 +23,15 @@
 				endif;
 			?>
 
-		</article>
+			</section>
 
 	<?php endwhile; else: ?>
-		<article>			<h2>Not Found</h2>			<p>Sorry, but you are looking for something that isn't here.</p>			<?php include (TEMPLATEPATH . "/searchform.php"); ?>		</article>
-	<?php endif; ?></div><!-- content END -->
+		<article>
+			<h2>Not Found</h2>
+			<p>Sorry, but you are looking for something that isn't here.</p>
+			<?php include (TEMPLATEPATH . "/searchform.php"); ?>
+		</article>
+	<?php endif; ?>
+<!-- content END -->
 
 <?php get_footer(); ?>

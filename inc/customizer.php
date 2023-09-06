@@ -27,6 +27,13 @@ function unko_customizer($wp_customize)
             )
     );
 
+    $wp_customize->add_section(
+        'subscibe_shortcode_content',
+        array(
+            'title'=>__('Subscribe Shortcode', 'mytheme'),
+            )
+    );
+
     //  =============================
     //  = Text Input                =
     //  =============================
@@ -43,25 +50,18 @@ function unko_customizer($wp_customize)
         'settings'   => 'unkonepal_theme_options[text_footer_content]',
     ));
 
-    // $wp_customize->add_setting(
-    //     'footertext_control_content',
-    //     array(
-    //         'default' => '',
-    //         'type' => 'footertext',
-    //         'capability' => 'edit_theme_options',
-    //         'transport' => 'refresh',
-    //     )
-    // );
-    // $wp_customize->add_control(
-    //     new Custom_Text_Control(
-    //         $wp_customize,
-    //         'footertext_control',
-    //         array(
-    //             'label' => 'Footer Content',
-    //             'section' => 'footer_content',
-    //             'settings' => 'footertext_control_content'
-    //         )
-    //     )
-    // );
+    $wp_customize->add_setting('unkonepal_subscibe_options[subscibe_shortcode]', array(
+        'default'        => '',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'option',
+
+    ));
+
+    $wp_customize->add_control('unkonepal_subscibe_shortcode', array(
+        'label'      => __('Shorcode', 'unkonepal'),
+        'section'    => 'subscibe_shortcode_content',
+        'settings'   => 'unkonepal_subscibe_options[subscibe_shortcode]',
+    ));
+
 }
 add_action('customize_register', 'unko_customizer');
