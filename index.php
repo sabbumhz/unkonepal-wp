@@ -13,7 +13,8 @@
 			?><section>
 				<?php the_content(); ?>
 			</section>
-		<?php }
-	?>
+		<?php }?>
+
+	
 
 <?php get_footer(); ?>
