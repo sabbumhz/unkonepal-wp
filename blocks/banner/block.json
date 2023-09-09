@@ -7,7 +7,7 @@
     "icon": "admin-comments",
     "keywords": ["banner"],
     "acf": {
-        "mode": "preview",
+        "mode": "auto",
         "renderTemplate": "banner.php"
     },
     "align": "full"

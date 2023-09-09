@@ -7,7 +7,7 @@
     "icon": "admin-comments",
     "keywords": ["Category"],
     "acf": {
-        "mode": "preview",
+        "mode": "auto",
         "renderTemplate": "category-list.php"
     },
     "align": "full"

@@ -7,7 +7,7 @@
     "icon": "admin-comments",
     "keywords": ["products, latest products"],
     "acf": {
-        "mode": "preview",
+        "mode": "auto",
         "renderTemplate": "latest-product-list.php"
     },
     "align": "full"
