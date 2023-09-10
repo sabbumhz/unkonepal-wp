@@ -759,6 +759,7 @@ header{
 banner img
 *--------------------------------------------------*/
 main {
+    border-top: 1px solid var(--light-gray);
     > img{
         width: 100%;
         margin-bottom: 32px;
