@@ -261,6 +261,7 @@ Buttons
         padding: 8px 34px;
         border-radius: 40px;
         color: var(--light);
+        transition: all 0.3s ease-in-out;
         @extend p;
         @media (min-width: 768px) {
             padding: 10px 42px;
@@ -272,12 +273,21 @@ Buttons
     &--primary{
         background-color: var(--chestnut);
         width: auto;
+        &:hover,
+        &:focus{
+            background-color: var(--teal);
+        }
     }
     &--secondary{
         background-color: var(--teal);
     }
     &--underline{
         border-bottom: 2px solid var(--chestnut);
+        &:hover,
+        &:focus{
+            border-bottom: 2px solid var(--teal);
+            color: var(--teal);
+        }
     }
     &--disabled{
         background-color: var(--light);
@@ -585,6 +595,52 @@ header{
     }
 }
 
+.my-account a,
+.my-cart a{
+    position: relative;
+    padding-left: 32px;
+    &:before{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        content: " ";
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block;
+    }
+    &::after{
+        content: '';
+        width: 0;
+        height: 2px;
+        background-color: var(--chestnut);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: width 0.3s ease-in-out;
+    }
+    &:hover,
+    &.active{
+        &::after{
+            width: 100%;
+        }
+    }
+}
+
+.my-account a{
+    &:before{
+        background-image: url('images/user.svg');
+    }
+}
+
+.my-cart a{
+    &:before{
+        background-image: url('images/cart.svg');
+    }
+}
+
 .header-search{
     width: 100%;
     border-top: 1px solid var(--light);
@@ -776,6 +832,7 @@ ul.products{
         margin-top: 8px;
         display: inline-block;
         margin-top: 4px;
+        @extend .p-sm;
     }
     & + div{
         margin-top: 60px;
@@ -917,6 +974,29 @@ footer{
         margin-top: 100px;
         padding-top: 80px;
     }
+    ul.footer-nav{
+        li {
+            a{
+                position: relative;
+                &::after{
+                    content: '';
+                    width: 0;
+                    height: 2px;
+                    background-color: var(--chestnut);
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                    transition: width 0.3s ease-in-out;
+                }
+                &:hover,
+                &.active{
+                    &::after{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
     > div + div{
         display: flex;
         gap: 40px 60px;
@@ -951,6 +1031,10 @@ footer{
                 }
                 svg{
                     fill: var(--chestnut);
+                    &:hover,
+                    &:focus{
+                        fill: var(--teal);
+                    }
                 }
             }
         } 
