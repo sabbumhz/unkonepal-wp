@@ -28,10 +28,14 @@ var searchWrapper = document.querySelector('header');
 
 search_opener.addEventListener("click", function(){
     searchWrapper.classList.add('active');
+    body.classList.add('search-show');
+    menuWrapper.classList.remove('show');
 });
 
 search_hider.addEventListener("click", function(){
     searchWrapper.classList.remove('active');
+    body.classList.remove('search-show');
+    body.classList.remove('show');
 });
 
 

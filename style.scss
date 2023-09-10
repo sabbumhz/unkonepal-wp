@@ -441,6 +441,18 @@ Header
 *--------------------------------------------------*/
 header{
     position: relative;
+    background-color: var(--white);
+    z-index: 2;
+    .show &{
+        @media (max-width: 767.9px) {
+            background: none;
+            z-index: 1;
+        }
+    }
+    .search-show &{
+        background-color: var(--white);
+        z-index: 2;
+    }
 }
 
 .highlight-text{
@@ -458,7 +470,7 @@ header{
     margin: 16px 32px;
     position: relative;
     background-color: var(--white);
-    z-index: 2;
+    z-index: 1;
     @media (min-width: 768px) {
         margin: 24px 40px 0;
     }
@@ -532,7 +544,7 @@ header{
     nav{
         @media (max-width: 767.9px) {
             position: fixed;
-            width: 80%;
+            width: calc(100% - 24px);
             background: var(--light);
             top: 0;
             height: 100vh;
@@ -584,9 +596,10 @@ header{
                     }
                 }
                 &.search-item a{
-                    display: flex;
+                    display: inline-flex;
                     align-items: center;
                     gap: 4px;
+                    cursor: pointer;
                 }
             }
         }
@@ -600,6 +613,9 @@ header{
 .my-cart a{
     position: relative;
     padding-left: 32px;
+    .main-navigation nav ul &{
+        padding-left: 32px;
+    }
     &:before{
         position: absolute;
         left: 0;
