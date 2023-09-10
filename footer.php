@@ -33,8 +33,8 @@ $footerArray = get_option('unkonepal_theme_options');
 				</a></li>
 			</ul>
 		</div>
-		<?php wp_nav_menu(array( 'theme_location' => 'footnav1', 'container' => 'ul', 'menu_class' => '' )); ?>
-		<?php wp_nav_menu(array( 'theme_location' => 'footnav2', 'container' => 'ul', 'menu_class' => '' )); ?>
+		<?php wp_nav_menu(array( 'theme_location' => 'footnav1', 'container' => 'ul', 'menu_class' => 'footer-nav' )); ?>
+		<?php wp_nav_menu(array( 'theme_location' => 'footnav2', 'container' => 'ul', 'menu_class' => 'footer-nav' )); ?>
 
 		<div class="subscribe-form">
 			<h5>Subscribe to Our Newsletters</h5>

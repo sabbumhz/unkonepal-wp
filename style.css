@@ -2579,7 +2579,7 @@ footer .woocommerce h5 + button,
 footer h5 + textarea,
 footer h5 + input, footer h5 + .selection[type=submit],
 footer h5 + textarea[type=submit],
-footer h5 + input[type=submit], .variation-size a, .highlight-text, .selection[type=number],
+footer h5 + input[type=submit], .variation-size a, ul.products .price, .highlight-text, .selection[type=number],
 textarea[type=number],
 input[type=number], .selection::placeholder,
 textarea::placeholder,
@@ -2599,7 +2599,7 @@ input::placeholder {
   footer h5 + textarea,
   footer h5 + input, footer h5 + .selection[type=submit],
   footer h5 + textarea[type=submit],
-  footer h5 + input[type=submit], .variation-size a, .highlight-text, .selection[type=number],
+  footer h5 + input[type=submit], .variation-size a, ul.products .price, .highlight-text, .selection[type=number],
   textarea[type=number],
   input[type=number], .selection::placeholder,
   textarea::placeholder,
@@ -2619,7 +2619,7 @@ input::placeholder {
   footer h5 + textarea,
   footer h5 + input, footer h5 + .selection[type=submit],
   footer h5 + textarea[type=submit],
-  footer h5 + input[type=submit], .variation-size a, .highlight-text, .selection[type=number],
+  footer h5 + input[type=submit], .variation-size a, ul.products .price, .highlight-text, .selection[type=number],
   textarea[type=number],
   input[type=number], .selection::placeholder,
   textarea::placeholder,
@@ -2657,6 +2657,7 @@ input[type=submit], .btn--secondary, .shop_table .actions .coupon button, .btn--
   padding: 8px 34px;
   border-radius: 40px;
   color: var(--light);
+  transition: all 0.3s ease-in-out;
 }
 @media (min-width: 768px) {
   .btn--primary, .logged-in .woocommerce .woocommerce-MyAccount-content header a.edit, .woocommerce-checkout-payment button, .wc-proceed-to-checkout a, .shop_table .actions button, .button.wc-backward,
@@ -2681,11 +2682,24 @@ input[type=submit] {
   background-color: var(--chestnut);
   width: auto;
 }
+.btn--primary:hover, .logged-in .woocommerce .woocommerce-MyAccount-content header a.edit:hover, .woocommerce-checkout-payment button:hover, .wc-proceed-to-checkout a:hover, .shop_table .actions button:hover, .button.wc-backward:hover,
+.woocommerce button:hover, .woocommerce-variation-add-to-cart .button:hover, .selection[type=submit]:hover,
+textarea[type=submit]:hover,
+input[type=submit]:hover, .btn--primary:focus, .logged-in .woocommerce .woocommerce-MyAccount-content header a.edit:focus, .woocommerce-checkout-payment button:focus, .wc-proceed-to-checkout a:focus, .shop_table .actions button:focus, .button.wc-backward:focus,
+.woocommerce button:focus, .woocommerce-variation-add-to-cart .button:focus, .selection[type=submit]:focus,
+textarea[type=submit]:focus,
+input[type=submit]:focus {
+  background-color: var(--teal);
+}
 .btn--secondary, .shop_table .actions .coupon button {
   background-color: var(--teal);
 }
 .btn--underline {
   border-bottom: 2px solid var(--chestnut);
+}
+.btn--underline:hover, .btn--underline:focus {
+  border-bottom: 2px solid var(--teal);
+  color: var(--teal);
 }
 .btn--disabled, .out-of-stock {
   background-color: var(--light);
@@ -3127,6 +3141,49 @@ header {
   right: 0;
 }
 
+.my-account a,
+.my-cart a {
+  position: relative;
+  padding-left: 32px;
+}
+.my-account a:before,
+.my-cart a:before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  content: " ";
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+}
+.my-account a::after,
+.my-cart a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--chestnut);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+.my-account a:hover::after, .my-account a.active::after,
+.my-cart a:hover::after,
+.my-cart a.active::after {
+  width: 100%;
+}
+
+.my-account a:before {
+  background-image: url("images/user.svg");
+}
+
+.my-cart a:before {
+  background-image: url("images/cart.svg");
+}
+
 .header-search {
   width: 100%;
   border-top: 1px solid var(--light);
@@ -3499,6 +3556,22 @@ footer {
     padding-top: 80px;
   }
 }
+footer ul.footer-nav li a {
+  position: relative;
+}
+footer ul.footer-nav li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--chestnut);
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+footer ul.footer-nav li a:hover::after, footer ul.footer-nav li a.active::after {
+  width: 100%;
+}
 footer > div + div {
   display: flex;
   gap: 40px 60px;
@@ -3584,6 +3657,21 @@ footer > div + div div .page section h2 + textarea[type=submit] + ul svg,
 footer > div + div div .page section h2 + input[type=submit] + ul svg,
 .page section footer > div + div div h2 + input[type=submit] + ul svg {
   fill: var(--chestnut);
+}
+footer > div + div div p + ul svg:hover, footer > div + div div .woocommerce-variation .woocommerce-variation-price .price + ul svg:hover, .woocommerce-variation .woocommerce-variation-price footer > div + div div .price + ul svg:hover, footer > div + div div .btn--primary + ul svg:hover, footer > div + div div .logged-in .woocommerce .woocommerce-MyAccount-content header a.edit + ul svg:hover, .logged-in .woocommerce .woocommerce-MyAccount-content header footer > div + div div a.edit + ul svg:hover, footer > div + div div .woocommerce-checkout-payment button + ul svg:hover, .woocommerce-checkout-payment footer > div + div div button + ul svg:hover, footer > div + div div .wc-proceed-to-checkout a + ul svg:hover, .wc-proceed-to-checkout footer > div + div div a + ul svg:hover, footer > div + div div .shop_table .actions button + ul svg:hover, .shop_table .actions footer > div + div div button + ul svg:hover, footer > div + div div .button.wc-backward + ul svg:hover,
+footer > div + div div .woocommerce button + ul svg:hover,
+.woocommerce footer > div + div div button + ul svg:hover, footer > div + div div .woocommerce-variation-add-to-cart .button + ul svg:hover, .woocommerce-variation-add-to-cart footer > div + div div .button + ul svg:hover, footer > div + div div .btn--secondary + ul svg:hover, footer > div + div div .btn--disabled + ul svg:hover, footer > div + div div .out-of-stock + ul svg:hover, footer > div + div div .selection + ul svg:hover,
+footer > div + div div textarea + ul svg:hover,
+footer > div + div div input + ul svg:hover,
+footer > div + div div textarea[type=submit] + ul svg:hover,
+footer > div + div div input[type=submit] + ul svg:hover, footer > div + div div p + ul svg:focus, footer > div + div div .woocommerce-variation .woocommerce-variation-price .price + ul svg:focus, .woocommerce-variation .woocommerce-variation-price footer > div + div div .price + ul svg:focus, footer > div + div div .btn--primary + ul svg:focus, footer > div + div div .logged-in .woocommerce .woocommerce-MyAccount-content header a.edit + ul svg:focus, .logged-in .woocommerce .woocommerce-MyAccount-content header footer > div + div div a.edit + ul svg:focus, footer > div + div div .woocommerce-checkout-payment button + ul svg:focus, .woocommerce-checkout-payment footer > div + div div button + ul svg:focus, footer > div + div div .wc-proceed-to-checkout a + ul svg:focus, .wc-proceed-to-checkout footer > div + div div a + ul svg:focus, footer > div + div div .shop_table .actions button + ul svg:focus, .shop_table .actions footer > div + div div button + ul svg:focus, footer > div + div div .button.wc-backward + ul svg:focus,
+footer > div + div div .woocommerce button + ul svg:focus,
+.woocommerce footer > div + div div button + ul svg:focus, footer > div + div div .woocommerce-variation-add-to-cart .button + ul svg:focus, .woocommerce-variation-add-to-cart footer > div + div div .button + ul svg:focus, footer > div + div div .btn--secondary + ul svg:focus, footer > div + div div .btn--disabled + ul svg:focus, footer > div + div div .out-of-stock + ul svg:focus, footer > div + div div .selection + ul svg:focus,
+footer > div + div div textarea + ul svg:focus,
+footer > div + div div input + ul svg:focus,
+footer > div + div div textarea[type=submit] + ul svg:focus,
+footer > div + div div input[type=submit] + ul svg:focus {
+  fill: var(--teal);
 }
 @media (min-width: 768px) {
   footer > div + div ul:nth-of-type(1) {
