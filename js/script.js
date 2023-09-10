@@ -30,7 +30,17 @@ search_opener.addEventListener("click", function(){
     searchWrapper.classList.add('active');
 });
 
-
 search_hider.addEventListener("click", function(){
     searchWrapper.classList.remove('active');
 });
+
+
+var filter_opener = document.querySelector('.filter-text');
+var filterWrapper = document.querySelector('.wpf_form_filter');
+
+filterWrapper.classList.add('filter-off');
+
+filter_opener.addEventListener("click", function(){
+    filterWrapper.classList.toggle('filter-off');
+});
+

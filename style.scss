@@ -1,7 +1,8 @@
 /*  
 Theme Name: UnkoNepal (Progress)
 Theme URI: https://unkonepal.com
-Description: Unko Nepal Work in Progress
+Description: A ecommerce theme build to connect kniiters with the knit lovers.
+Required Plugins: Woocommerce, ACF(pro), Contact form 7, Variation Swatches for WooCommerce , CookieYes | GDPR Cookie Consent, Contact Form 7 Extension For Mailchimp
 Version: 1
 Author: Sabbu Maharjan
 Author URI: https://unkonepal.com
@@ -1097,7 +1098,8 @@ footer{
 /*-------------------------------------------------*
 Product Page
 *--------------------------------------------------*/
-.product-page-content{
+.product-page-content .wpf-search-container{
+    position: relative;
      > .product{
         display: flex;
         // grid-template-columns: repeat(2, 1fr);
@@ -2283,6 +2285,9 @@ Knitters Page and List
 /*-------------------------------------------------*
 Wordpress Content
 *--------------------------------------------------*/
+section > .wp-block-heading {
+    margin-top: 0;
+}
 
 .wp-block-heading{
     margin-top: 32px;
@@ -2520,4 +2525,105 @@ ul.search-listing{
 /*-------------------------------------------------*
 Product Filter Section
 *--------------------------------------------------*/
+.woocommerce-result-count{
+    display: none;
+}
 
+.woocommerce-ordering{
+    select{
+        padding: 0 24px 0 0;
+        margin-top: 0;
+        width: 100%;
+        border: 0;
+        color: var(--chestnut);
+        @extend .p-sm;
+        width: auto;
+        background-image: url(images/arrow.svg);
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        appearance: none;
+        background-size: 8px;
+        @media (min-width: 768px) {
+            padding: 0 28px 0 0;
+        }
+        @media (min-width: 1024px) {
+            padding: 0 36px 0 0;
+        } 
+        &:focus,
+        &:hover,
+        &:focus-visible{
+            border: 0;
+            outline: none;
+        }
+    }
+}
+
+.wpf-search-container{
+    .woocommerce-ordering{
+        text-align: right;
+    }
+}
+
+.wpf_form_filter{
+    position: absolute;
+    background-color: var(--light);
+    width: 100%;
+    z-index: 5;
+    padding: 40px;
+    top: 140px;
+    visibility: visible;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    transform: translateY(-10%);
+    box-shadow: 0 4px 8px rgba(140,101,81,0.1);
+    border-top: 1px solid var(--chestnut);
+    @media (min-width: 768px) {
+        top: 160px;
+    }
+    @media (min-width: 1024px) {
+        top: 200px;
+    } 
+    &.filter-off{
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10%);
+        top: 120px;
+        @media (min-width: 768px) {
+            top: 140px;
+        }
+        @media (min-width: 1024px) {
+            top: 170px;
+        } 
+    }
+    .wpf_layout_vertical{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+        @media (min-width: 768px) {
+            top: 160px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .wpf_item{
+        padding: 0;
+    }
+    .wpf_layout_vertical .wpf_item + .wpf_item .wpf_item_name{
+        margin-top: 0;
+    }
+}
+
+.woocommerce-products-header__title.page-title{
+    margin-bottom: 24px;
+}
+
+.filter-text{
+    cursor: pointer;
+    float: left;
+    svg{
+        @media (max-width: 768.9px) {
+            width: 12px;
+            height: 10px;
+        }
+    }
+}
