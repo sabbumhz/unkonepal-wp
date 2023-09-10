@@ -7,7 +7,7 @@
     "icon": "admin-comments",
     "keywords": ["fifty-fifty"],
     "acf": {
-        "mode": "preview",
+        "mode": "auto",
         "renderTemplate": "fifty-fifty.php"
     },
     "align": "full"

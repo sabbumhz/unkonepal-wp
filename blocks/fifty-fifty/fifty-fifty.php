@@ -11,6 +11,13 @@
  * @param   array $context The context provided to the block by the post or it's parent block.
  */
 
+ if ( is_admin() ):
+    ?>
+    <img src="<?php echo get_template_directory_uri(); ?>/images/block-preview.jpg" width="" height="" alt="">
+    <?php
+
+else :
+
 // Support custom "anchor" values.
 $anchor = '';
 if ( ! empty( $block['anchor'] ) ) {
@@ -48,3 +55,4 @@ $className = ($imagePosition =='right') ? 'class="section-blocks section-blocks-
     </div>
 </section>
 <!-- block section end -->
+<?php endif;
