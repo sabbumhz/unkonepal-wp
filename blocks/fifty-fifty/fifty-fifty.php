@@ -13,7 +13,7 @@
 
  if ( is_admin() ):
     ?>
-    <img src="<?php echo get_template_directory_uri(); ?>/images/block-preview.jpg" width="" height="" alt="">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/block-preview.jpg" width="" height="" alt="block preview image">
     <?php
 
 else :

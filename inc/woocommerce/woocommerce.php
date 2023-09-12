@@ -210,7 +210,7 @@ add_filter( 'wc_product_sku_enabled', '__return_false' );
 add_action( 'woocommerce_after_add_to_cart_button', 'cutomisation_btn', 9 );
   
 function cutomisation_btn() { ?>
-<a class="btn btn--secondary product-customise-btn" href="google.com">Customise</a>
+<a class="btn btn--secondary product-customise-btn" href="https://unkonepal.com/customisation/">Customise</a>
 <?php
 }
 
@@ -220,7 +220,7 @@ add_action('woocommerce_single_product_summary', 'customisation_btn_outofstock',
 function customisation_btn_outofstock() {
     global $product;
     if(!$product->is_in_stock( )) {
-        echo  '<a class="btn btn--secondary product-customise-btn" href="google.com">Customise</a>';
+        echo  '<a class="btn btn--secondary product-customise-btn" href="https://unkonepal.com/customisation/">Customise</a>';
     }
 }
 
@@ -228,7 +228,7 @@ function customisation_btn_outofstock() {
 // function variation_out_of_stock_show_form( $data, $product, $variation ) {
 //     if( ! $data['is_in_stock'] )
 //     {
-// 		echo  '<a class="btn btn--secondary product-customise-btn" href="google.com">Customise</a>';
+// 		echo  '<a class="btn btn--secondary product-customise-btn" href="https://unkonepal.com/customisation/">Customise</a>';
 //     }
 //     return $data;
 // }

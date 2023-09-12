@@ -30,10 +30,11 @@
 			<?php while (have_posts()) : the_post(); ?>
 				<li>
 					<?php 
+						$image_alt = get_post_meta((get_post_thumbnail_id($post->ID)), '_wp_attachment_image_alt', TRUE);
 						$feat_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); 
 						if($feat_image!='' ){?>
 						<figure>
-							<img src=' <?php echo $feat_image ?>'>
+							<img alt="<?php echo $image_alt ?> src=' <?php echo $feat_image ?>'>
 						</figure>
 						<?php }
 					?>

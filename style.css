@@ -1,8 +1,7 @@
 /*  
-Theme Name: UnkoNepal (Progress)
+Theme Name: UnkoNepal
 Theme URI: https://unkonepal.com
-Description: A ecommerce theme build to connect kniiters with the knit lovers.
-Required Plugins: Woocommerce, ACF(pro), Contact form 7, Variation Swatches for WooCommerce , CookieYes | GDPR Cookie Consent, Contact Form 7 Extension For Mailchimp
+Description: A ecommerce theme built to connect kniiters with the knit lovers. Required Plugins: Woocommerce, ACF(pro), Contact form 7, Variation Swatches for WooCommerce , CookieYes | GDPR Cookie Consent, Contact Form 7 Extension For Mailchimp
 Version: 1
 Author: Sabbu Maharjan
 Author URI: https://unkonepal.com
@@ -2975,6 +2974,18 @@ Header
 *--------------------------------------------------*/
 header {
   position: relative;
+  background-color: var(--white);
+  z-index: 2;
+}
+@media (max-width: 767.9px) {
+  .show header {
+    background: none;
+    z-index: 1;
+  }
+}
+.search-show header {
+  background-color: var(--white);
+  z-index: 2;
 }
 
 .highlight-text {
@@ -2990,14 +3001,16 @@ header {
 }
 
 .top-nav {
-  margin: 16px 32px;
+  padding: 16px 0;
+  margin: 0 32px;
   position: relative;
   background-color: var(--white);
-  z-index: 2;
+  z-index: 1;
 }
 @media (min-width: 768px) {
   .top-nav {
-    margin: 24px 40px 0;
+    padding: 24px 0 0;
+    margin: 0 40px;
   }
 }
 @media (max-width: 767.9px) {
@@ -3078,7 +3091,7 @@ header {
 @media (max-width: 767.9px) {
   .main-navigation nav {
     position: fixed;
-    width: 80%;
+    width: calc(100% - 24px);
     background: var(--light);
     top: 0;
     height: 100vh;
@@ -3134,9 +3147,13 @@ header {
   width: 100%;
 }
 .main-navigation nav ul li.search-item a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 4px;
+  cursor: pointer;
+}
+.main-navigation nav ul li.current_page_item a::after {
+  width: 100%;
 }
 .main-navigation nav.show {
   right: 0;
@@ -3145,6 +3162,10 @@ header {
 .my-account a,
 .my-cart a {
   position: relative;
+  padding-left: 32px;
+}
+.main-navigation nav ul .my-account a,
+.main-navigation nav ul .my-cart a {
   padding-left: 32px;
 }
 .my-account a:before,
@@ -3576,6 +3597,9 @@ footer ul.footer-nav li a::after {
 footer ul.footer-nav li a:hover::after, footer ul.footer-nav li a.active::after {
   width: 100%;
 }
+footer ul.footer-nav li.current_page_item a::after {
+  width: 100%;
+}
 footer > div + div {
   display: flex;
   gap: 40px 60px;
@@ -3753,6 +3777,11 @@ footer ul li + li {
 /*-------------------------------------------------*
 Product Page
 *--------------------------------------------------*/
+.product-page-content {
+  position: relative;
+  z-index: 0;
+}
+
 .product-page-content .wpf-search-container {
   position: relative;
 }
@@ -3827,6 +3856,13 @@ Product Page
   margin-top: 40px;
   gap: 40px;
   text-transform: capitalize;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .maker {
+    gap: 12px;
+    flex-direction: row;
+  }
 }
 .maker img {
   flex: 0 0 240px;
@@ -4374,6 +4410,11 @@ ol.commentlist .comment_container .comment-text .description {
 /*-------------------------------------------------*
 Account pages
 *--------------------------------------------------*/
+.button.wc-backward.wc-backward:hover,
+.woocommerce button.wc-backward:hover {
+  color: var(--white);
+}
+
 .button.wc-backward {
   margin-top: 40px;
 }
@@ -5384,20 +5425,16 @@ Knitters Page and List
 /*-------------------------------------------------*
 Wordpress Content
 *--------------------------------------------------*/
-section > .wp-block-heading {
-  margin-top: 0;
-}
-
-.wp-block-heading {
+* + .wp-block-heading {
   margin-top: 32px;
 }
 @media (min-width: 768px) {
-  .wp-block-heading {
+  * + .wp-block-heading {
     margin-top: 40px;
   }
 }
 @media (min-width: 1024px) {
-  .wp-block-heading {
+  * + .wp-block-heading {
     margin-top: 64px;
   }
 }
@@ -5870,4 +5907,16 @@ Product Filter Section
     width: 12px;
     height: 10px;
   }
+}
+
+.page p a, .page .btn--primary a, .page .btn--secondary a, .page .btn--disabled a, .page section h2 + p a, .page .selection a,
+.page textarea a,
+.page input a,
+.page section h2 + textarea a,
+.page section h2 + input a,
+.page textarea[type=submit] a,
+.page input[type=submit] a, .page .woocommerce-variation-add-to-cart .button a, .woocommerce-variation-add-to-cart .page .button a, .page .out-of-stock a, .page .woocommerce-variation .woocommerce-variation-price .price a, .woocommerce-variation .woocommerce-variation-price .page .price a, .page .button.wc-backward a,
+.page .woocommerce button a,
+.woocommerce .page button a, .page .shop_table .actions button a, .shop_table .actions .page button a, .page .wc-proceed-to-checkout a a, .wc-proceed-to-checkout .page a a, .page .woocommerce-checkout-payment button a, .woocommerce-checkout-payment .page button a, .page .logged-in .woocommerce .woocommerce-MyAccount-content header a.edit a, .logged-in .woocommerce .woocommerce-MyAccount-content header .page a.edit a {
+  color: var(--teal);
 }/*# sourceMappingURL=style.css.map */
