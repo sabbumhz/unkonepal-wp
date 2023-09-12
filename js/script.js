@@ -38,13 +38,14 @@ search_hider.addEventListener("click", function(){
     body.classList.remove('show');
 });
 
-
 var filter_opener = document.querySelector('.filter-text');
 var filterWrapper = document.querySelector('.wpf_form_filter');
 
-filterWrapper.classList.add('filter-off');
-
-filter_opener.addEventListener("click", function(){
-    filterWrapper.classList.toggle('filter-off');
-});
+if(filter_opener ){
+    filterWrapper.classList.add('filter-off');
+    
+    filter_opener.addEventListener("click", function(){
+        filterWrapper.classList.toggle('filter-off');
+    });
+}
 

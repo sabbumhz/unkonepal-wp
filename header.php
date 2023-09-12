@@ -3,26 +3,24 @@
 
     <head>
         <meta charset="UTF-8">
-		<title><?php wp_title(''); ?></title>
+		<title><?php bloginfo('name'); ?></title>
 		<?php wp_head(); ?>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="UnkoNepal is a one-stop-shop for all your knitting needs, providing high-quality products, expert support, and easy shopping experience.">
+		<meta name="description" content="UnkoNepal connects with knitting and crochetting needs, providing high-quality customised products, showcasing the knitters and crochetors along their work and connecting people by thread.">
+		<meta name="keywords" content="Knits, Crochet, knitters, nepal, kathmandu, wool, warmth">
+        <meta name="author" content="Sabbu Maharjan">
 
-        <!--  Essential META Tags -->
-        <meta property="og:title" content="UnkoNepal">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="//images/screenshot-min.jpg">
-        <meta property="og:url" content="https://unkonepal.com/">
-        <meta name="twitter:card" content="UnkoNepal">
+		<!--  Essential META Tags -->
+		<meta property="og:title" content="UnkoNepal">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="//images/screenshot.jpg">
+		<meta property="og:url" content="https://unkonepal.com/">
+		<meta name="twitter:card" content="UnkoNepal">
 
-        <!--  Non-Essential, But Recommended -->
-        <meta property="og:description" content="UnkoNepal is a one-stop-shop for all your knitting needs, providing high-quality products, expert support, and easy shopping experience.">
-        <meta property="og:site_name" content="UnkoNepal">
-        <meta name="twitter:image:alt" content="UnkoNepal">
-
-        <!-- Icons for site -->
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/unko.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/unko16.png">
+		<!--  Non-Essential, But Recommended -->
+		<meta property="og:description" content="UnkoNepal connects with knitting and crochetting needs, providing high-quality customised products, showcasing the knitters and crochetors along their work and connecting people by thread.">
+		<meta property="og:site_name" content="UnkoNepal">
+		<meta name="twitter:image:alt" content="UnkoNepal">
         
         <!-- fonts links -->
         <link rel="preconnect" href="https://fonts.googleapis.com"> 

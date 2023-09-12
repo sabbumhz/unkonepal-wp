@@ -14,7 +14,7 @@
 
 if ( is_admin() ):
     ?>
-    <img src="<?php echo get_template_directory_uri(); ?>/images/category-preview.jpg" width="" height="" alt="">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/category-preview.jpg" width="" height="" alt="category-preview-image">
     <?php
 
 else :
