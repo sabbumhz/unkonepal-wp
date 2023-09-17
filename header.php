@@ -6,19 +6,19 @@
 		<title><?php bloginfo('name'); ?></title>
 		<?php wp_head(); ?>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="UnkoNepal connects with knitting and crochetting needs, providing high-quality customised products, showcasing the knitters and crochetors along their work and connecting people by thread.">
+		<meta name="description" content="UnkoNepal, connects with knitting and crochetting needs, providing high-quality customised products, showcasing the knitters and crochetors along their work and connecting people by thread.">
 		<meta name="keywords" content="Knits, Crochet, knitters, nepal, kathmandu, wool, warmth">
         <meta name="author" content="Sabbu Maharjan">
 
 		<!--  Essential META Tags -->
 		<meta property="og:title" content="UnkoNepal">
 		<meta property="og:type" content="website">
-		<meta property="og:image" content="//images/screenshot.jpg">
+		<meta property="og:image" content="http://unkonepal.com/wp-content/uploads/2023/09/promotion-site.jpg">
 		<meta property="og:url" content="https://unkonepal.com/">
 		<meta name="twitter:card" content="UnkoNepal">
 
 		<!--  Non-Essential, But Recommended -->
-		<meta property="og:description" content="UnkoNepal connects with knitting and crochetting needs, providing high-quality customised products, showcasing the knitters and crochetors along their work and connecting people by thread.">
+		<meta property="og:description" content="UnkoNepal, connects with knitting and crochetting needs, providing high-quality customised products, showcasing the knitters and crochetors along their work and connecting people by thread.">
 		<meta property="og:site_name" content="UnkoNepal">
 		<meta name="twitter:image:alt" content="UnkoNepal">
         

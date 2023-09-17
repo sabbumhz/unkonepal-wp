@@ -3774,6 +3774,15 @@ footer ul li + li {
     margin-top: 24px;
   }
 }
+footer .footer-bottom-text {
+  padding: 24px 32px;
+}
+@media (min-width: 768px) {
+  footer .footer-bottom-text {
+    padding: 32pxpx 40px;
+  }
+}
+
 /*-------------------------------------------------*
 Product Page
 *--------------------------------------------------*/
