@@ -56,7 +56,7 @@ $footerArray = get_option('unkonepal_theme_options');
 				<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5bcecf51f857fb7e514be67fd_25da91c150" tabindex="-1" value=""></div>
 					<div class="optionalParent">
 						<div class="clear foot">
-							<input class="btn btn--primary" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+							<input class="btn btn--primary" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
 						</div>
 					</div>
 				</div>
@@ -65,14 +65,12 @@ $footerArray = get_option('unkonepal_theme_options');
 			<!--End mc_embed_signup-->
 		</div>
 	</div>
-	<p class="p-sm">
+	<p class="footer-bottom-text p-sm">
 		<?php bloginfo('name');?> 	&#169; <?php echo date('Y');?>
 	</p>
 	<?php wp_footer(); ?>	
 </footer>
 <!-- footer start -->
- </div>
-<!-- wrapper END -->
 </body>
 
 </html>
