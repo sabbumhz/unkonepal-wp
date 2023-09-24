@@ -19,33 +19,70 @@ hider.addEventListener("click", function(){
 });
 
 /*-------------------------------------------------*
-Header Search bar 
+Header Search bar
 *--------------------------------------------------*/
 
 var search_opener = document.querySelector('.search-item');
 var search_hider = document.querySelector('.search-close');
 var searchWrapper = document.querySelector('header');
 
-search_opener.addEventListener("click", function(){
-    searchWrapper.classList.add('active');
-    body.classList.add('search-show');
-    menuWrapper.classList.remove('show');
-});
+if (search_opener) {
+    search_opener.addEventListener("click", function () {
+        searchWrapper.classList.add("active");
+        body.classList.add("search-show");
+        menuWrapper.classList.remove("show");
+    });
 
-search_hider.addEventListener("click", function(){
-    searchWrapper.classList.remove('active');
-    body.classList.remove('search-show');
-    body.classList.remove('show');
-});
-
-var filter_opener = document.querySelector('.filter-text');
-var filterWrapper = document.querySelector('.wpf_form_filter');
-
-if(filter_opener ){
-    filterWrapper.classList.add('filter-off');
-    
-    filter_opener.addEventListener("click", function(){
-        filterWrapper.classList.toggle('filter-off');
+    search_hider.addEventListener("click", function () {
+        searchWrapper.classList.remove("active");
+        body.classList.remove("search-show");
+        body.classList.remove("show");
     });
 }
 
+var filter_opener = document.querySelector(".filter-text");
+var filterWrapper = document.querySelector(".wpf_form_filter");
+
+if (filter_opener) {
+    filterWrapper.classList.add("filter-off");
+
+    filter_opener.addEventListener("click", function () {
+        filterWrapper.classList.toggle("filter-off");
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const contentContainer = document.querySelector(".product_container_js");
+    if (contentContainer === null) return;
+    const loadMoreButton = document.querySelector(".loadmore_product_js");
+    if (loadMoreButton === null) return;
+    const items = contentContainer.querySelectorAll("li.hidden");
+    let currentIndex = 0; // Start with the first hidden item.
+
+    loadMoreButton.addEventListener("click", function () {
+        const itemsToShow = 3;
+        for (let i = currentIndex; i < currentIndex + itemsToShow; i++) {
+            if (items[i]) {
+                items[i].style.display = "block";
+            }
+        }
+
+        currentIndex += itemsToShow;
+
+        if (currentIndex >= items.length) {
+            loadMoreButton.style.display = "none"; // Hide the button when all hidden items are visible.
+        }
+    });
+
+    // Initially hide all items except the first 3.
+    for (let i = 0; i < items.length; i++) {
+        if (i >= 3) {
+            items[i].style.display = "none";
+        }
+    }
+
+    // Check if there are no hidden items initially, hide the "Load More" button.
+    if (items.length <= 3) {
+        loadMoreButton.style.display = "none";
+    }
+});
