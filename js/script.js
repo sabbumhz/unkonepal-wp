@@ -51,6 +51,7 @@ if (filter_opener) {
     });
 }
 
+
 document.addEventListener("DOMContentLoaded", function () {
     const contentContainer = document.querySelector(".product_container_js");
     if (contentContainer === null) return;

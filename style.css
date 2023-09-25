@@ -5906,9 +5906,9 @@ Product Filter Section
   z-index: 5;
   padding: 40px;
   top: 140px;
+  margin-bottom: 0 !important;
   visibility: visible;
   transition: all 0.5s ease-in-out;
-  position: absolute;
   transform: translateY(-10%);
   box-shadow: 0 4px 8px rgba(140, 101, 81, 0.1);
   border-top: 1px solid var(--chestnut);
@@ -5929,6 +5929,7 @@ Product Filter Section
   visibility: hidden;
   transform: translateY(-10%);
   top: 120px;
+  position: absolute;
 }
 @media (min-width: 768px) {
   .wpf_form_filter.filter-off {
