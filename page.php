@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 	<?php 
 		$feat_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); 
 		$image_alt = get_post_meta((get_post_thumbnail_id($post->ID)), '_wp_attachment_image_alt', TRUE);
@@ -10,11 +9,18 @@
 
 	<?php if ( is_home() || is_front_page() ){
 		the_content();
-		}else{
-			?><section>
+		}else if (is_page() && !is_page_template()){
+			?>
+			<section>
+				<div class="max-width">
+					<?php the_content(); ?>
+				</div>
+			</section>
+			<?php
+		}else{ ?>
+			<section>
 				<?php the_content(); ?>
 			</section>
-		<?php }
+			<?php }
 	?>
-
 <?php get_footer(); ?>

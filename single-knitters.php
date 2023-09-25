@@ -23,6 +23,7 @@ if($feat_image!='' ){?>
 <?php $knitter_products = get_field('knitters_products');
 if($knitter_products):?>
     <section>
+        <h3>Knitter's Products</h3>
         <ul class="products columns-3 product_container_js">
             <?php foreach($knitter_products as $key=>$product):
                 $partData = [
@@ -34,9 +35,9 @@ if($knitter_products):?>
             endforeach;?>
         </ul>
 
-        <div class="products-navigation">
+        <span class="products-navigation">
             <button class="loadmore_product_js">Loadmore</button>
-        </div>
+        </span>
     </section>
 <?php
 endif;
