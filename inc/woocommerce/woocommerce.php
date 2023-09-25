@@ -164,7 +164,7 @@ function shoptimizer_maker_name_field() { ?>
 			<div>
 				<h3><?php the_field('maker_name'); ?></h3>
 				<p><?php the_field('maker_description'); ?></p>
-				<a href="<?php the_field('maker_profile'); ?>" class="btn btn--primary">
+				<a href="<?php the_field('maker_profile'); ?>" target="_blank" class="btn btn--primary">
 				<?php the_field('maker_name'); ?>'s Profile
 				</a>
 			</div>
