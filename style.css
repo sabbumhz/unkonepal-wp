@@ -2787,6 +2787,9 @@ footer > div + .out-of-stock {
 .max-width {
   max-width: 840px;
 }
+.woocommerce-page .max-width {
+  max-width: 1440px;
+}
 
 section {
   padding-top: 32px;
@@ -3465,6 +3468,12 @@ ul.products .price {
 ul.products + div {
   margin-top: 60px;
   text-align: center;
+}
+
+.page-numbers {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
 }
 
 .woocommerce-product-gallery__image {
