@@ -6,6 +6,7 @@ if( is_array($args) && $args['product'] ):
 
 if( $productData->ID ):
     $product = wc_get_product($productData->ID);
+    $productUrl = get_permalink($productData);
 ?>
 <style>
     .hidden{
@@ -13,7 +14,7 @@ if( $productData->ID ):
     }
 </style>
     <li class="product type-product post-15 status-publish first instock  shipping-taxable purchasable product-type-simple <?php echo ($key>2) ? 'hidden' : '';?>">
-        <a href="https://unkonepal.com/product/summer-crochet-top/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+        <a href="<?php echo $productUrl ?>" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
             <div class="product-img">
                 <?php echo get_the_post_thumbnail($productData->ID,'full',[
                     'class'=>'attachment-woocommerce_thumbnail size-woocommerce_thumbnail',
