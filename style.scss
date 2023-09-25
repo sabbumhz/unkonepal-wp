@@ -305,8 +305,7 @@ spacing & container
 *--------------------------------------------------*/
 section,
 footer > div,
-footer > div + p,
-main.pages{
+footer > div + p{
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 32px;
@@ -315,10 +314,9 @@ main.pages{
     }
 }
 
-// .home main section{
-//     max-width: 100%;
-//     padding: 0;
-// }
+.max-width{
+    max-width: 840px;
+}
 
 section{
     padding-top: 32px;
@@ -426,6 +424,7 @@ input{
     }
     &[type="submit"]{
         @extend .btn--primary;
+        cursor: pointer;
     }
     &:focus-visible{
        outline: 1px solid var(--chestnut);
@@ -824,6 +823,12 @@ ul.products{
         .button{
             display: none;
         }
+        .woocommerce-loop-product__title{
+            &:hover,
+            &:focus{
+                color: var(--teal);
+            }
+        }
     }
     .product-img{
         position: relative;
@@ -1099,6 +1104,7 @@ footer{
             }
             #mc-embedded-subscribe{
                 margin-top: 24px;
+                cursor: pointer;
             }
         } 
         + p{
@@ -1204,11 +1210,13 @@ Product Page
     max-width: 1100px;
     margin-top: 40px;
     gap: 40px;
-    text-transform: capitalize;
     flex-direction: column;
     @media (min-width: 768px) {
         gap: 12px;
         flex-direction: row;
+    }
+    @media (min-width: 1024px) {
+        gap: 24px;
     }
     img{
         flex: 0 0 240px;
@@ -1391,13 +1399,15 @@ Variation styling
 // woocommercer product tag
 .onsale{
     position: absolute;
-    left: 0;
-    top: 0;
-    background-color: var(--chestnut);
+    right: 8px;
+    top: 8px;
+    background-color: var(--lava);
     color: var(--light);
-    padding: 8px 12px;
+    padding: 8px 16px;
     @extend .p-sm;
     z-index: 2;
+    border-radius: 0 8px;
+    line-height: 1;
 }
 
 /*-------------------------------------------------*
@@ -1646,8 +1656,12 @@ Review Section
 *--------------------------------------------------*/
 .related{
     h2{
-        text-transform: capitalize
+        text-transform: capitalize;
     }
+}
+
+.woocommerce-Reviews-title{
+    @extend h3;
 }
 
 .woocommerce-noreviews{
@@ -2312,7 +2326,7 @@ Knitters Page and List
 }
 
 .single-knitters{
-    section{
+    section:first-of-type{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 24px;
@@ -2510,7 +2524,6 @@ Error Page
         input[type="submit"]{
             margin-left: auto;
             margin-right: auto;
-            cursor: pointer;
         }
         input[type="text"]{
             border: 1px solid var(--chestnut);
