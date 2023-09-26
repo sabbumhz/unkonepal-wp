@@ -40,6 +40,9 @@ if (search_opener) {
     });
 }
 
+/*-------------------------------------------------*
+Filter hide show
+*--------------------------------------------------*/
 var filter_opener = document.querySelector(".filter-text");
 var filterWrapper = document.querySelector(".wpf_form_filter");
 
@@ -52,6 +55,9 @@ if (filter_opener) {
 }
 
 
+/*-------------------------------------------------*
+Ajax loadmore in related products in knitters page
+*--------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", function () {
     const contentContainer = document.querySelector(".product_container_js");
     if (contentContainer === null) return;

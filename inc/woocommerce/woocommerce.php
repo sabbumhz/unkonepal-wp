@@ -173,7 +173,6 @@ function shoptimizer_maker_name_field() { ?>
 <?php }
 }
 
-
 /**
  * Add Product Review inplace of wocommerce tabs
  *
@@ -214,7 +213,7 @@ function cutomisation_btn() { ?>
 <?php
 }
 
-/* Show contact form instead of "Out Of Stock" message */
+/* Show customisation form instead of "Out Of Stock" message */
 
 add_action('woocommerce_single_product_summary', 'customisation_btn_outofstock', 32);
 function customisation_btn_outofstock() {
@@ -223,15 +222,6 @@ function customisation_btn_outofstock() {
         echo  '<a class="btn btn--secondary product-customise-btn" href="https://unkonepal.com/customisation/">Customise</a>';
     }
 }
-
-// add_filter( 'woocommerce_available_variation', 'variation_out_of_stock_show_form', 10, 3 );
-// function variation_out_of_stock_show_form( $data, $product, $variation ) {
-//     if( ! $data['is_in_stock'] )
-//     {
-// 		echo  '<a class="btn btn--secondary product-customise-btn" href="https://unkonepal.com/customisation/">Customise</a>';
-//     }
-//     return $data;
-// }
 
 /**
  * add title
@@ -317,11 +307,9 @@ function woo_related_products_limit() {
 	  $args['columns'] = 1; // arranged in 1 columns
 	  return $args;
   }
-
-
   
 /**
- * Product Filter
+ * integrate Product Filter
  */ 
 
   add_action('woocommerce_before_shop_loop','shop_main_heading');
