@@ -27,13 +27,6 @@ function unko_customizer($wp_customize)
             )
     );
 
-    $wp_customize->add_section(
-        'subscibe_shortcode_content',
-        array(
-            'title'=>__('Subscribe Shortcode', 'mytheme'),
-            )
-    );
-
     //  =============================
     //  = Text Input                =
     //  =============================
@@ -48,19 +41,6 @@ function unko_customizer($wp_customize)
         'label'      => __('Footer Content', 'unkonepal'),
         'section'    => 'footer_content',
         'settings'   => 'unkonepal_theme_options[text_footer_content]',
-    ));
-
-    $wp_customize->add_setting('unkonepal_subscibe_options[subscibe_shortcode]', array(
-        'default'        => '',
-        'capability'     => 'edit_theme_options',
-        'type'           => 'option',
-
-    ));
-
-    $wp_customize->add_control('unkonepal_subscibe_shortcode', array(
-        'label'      => __('Shorcode', 'unkonepal'),
-        'section'    => 'subscibe_shortcode_content',
-        'settings'   => 'unkonepal_subscibe_options[subscibe_shortcode]',
     ));
 
 }

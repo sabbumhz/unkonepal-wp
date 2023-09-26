@@ -19,7 +19,7 @@ if($feat_image!='' ){?>
     <p><?php the_content();?></p>
     </div>
 </section>
-<?php // echo do_shortcode('[products columns="3" limit="3" paginate="true"]'); ?>
+
 <?php $knitter_products = get_field('knitters_products');
 if($knitter_products):?>
     <section>

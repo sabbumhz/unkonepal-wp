@@ -1,6 +1,6 @@
 UnkoNepal
 Version 1.0
-Sep 10
+Sep 26
 
 Required plugins
 1. Woocommerce

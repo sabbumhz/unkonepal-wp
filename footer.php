@@ -39,16 +39,19 @@ $footerArray = get_option('unkonepal_theme_options');
 			<!-- Begin Mailchimp Signup Form -->
 			<div id="mc_embed_signup">
 				<form action="https://unkonepal.us21.list-manage.com/subscribe/post?u=5bcecf51f857fb7e514be67fd&amp;id=25da91c150&amp;f_id=008925e7f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">
-					<div id="mc_embed_signup_scroll">
+				<div id="mc_embed_signup_scroll">
 				<div class="mc-field-group">
-					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your Email Here" required>
+					<label for="subsciberEmail"><span class="hidden">Enter Your email here</span>
+					<input id="subsciberEmail" type="email" value="" name="EMAIL" aria-labelledby="subsciberEmail" class="required email" id="mce-EMAIL" placeholder="Your Email Here" required>
 					<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
 				</div>
 				<div id="mce-responses" class="clear foot">
 					<div class="response" id="mce-error-response" style="display:none"></div>
 					<div class="response" id="mce-success-response" style="display:none"></div>
 				</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-				<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5bcecf51f857fb7e514be67fd_25da91c150" tabindex="-1" value=""></div>
+				<div style="position: absolute; left: -5000px;" aria-hidden="true">
+				<label for="submit-btn"><span class="hidden">Submit</span>
+				<input type="text" id="submit-btn" name="b_5bcecf51f857fb7e514be67fd_25da91c150" tabindex="-1" value=""></div>
 					<div class="optionalParent">
 						<div class="clear foot">
 							<input class="btn btn--primary" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">

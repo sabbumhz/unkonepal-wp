@@ -58,6 +58,38 @@ table {
 }
 
 /* ======== DON'T CHANGE ANYTHING ABOVE THIS LINE ======== */
+
+/*==========================================================
+Index
+1. Box Sizing
+2. Variable Colors
+3. Global Styling
+4. Typography Styling
+5. Buttons
+6. spacing & container
+7. Forms
+8. Header
+9. Banner Img
+10. Featured Products Block
+11. 50-50 Blocks section
+12. Collection List Section
+13. Footer Styling
+14. Product Page
+15. Product gallery
+16. Variation styling
+17. woocommercer product tag
+18. Woocommerce Stylings
+19. Star rating
+20. Review Section
+21. Account pages
+22. Knitters Page and List
+23. Wordpress Content
+24. Error Page
+25. Search/Archive Section
+26. Product Filter Section
+
+==========================================================*/
+
 /*==========================================================
 Box Sizing
 ==========================================================*/
@@ -177,6 +209,12 @@ p + a{
 
 b{
     font-weight: 600;
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
 }
 
 /*==========================================================
@@ -455,6 +493,12 @@ header{
             z-index: 1;
         }
     }
+
+    #searchform label{
+        margin-bottom: 4px;
+        display: block;
+    }
+
     .search-show &{
         background-color: var(--white);
         z-index: 2;
@@ -785,7 +829,7 @@ header{
 }
 
 /*-------------------------------------------------*
-banner img
+Banner Img
 *--------------------------------------------------*/
 main {
     border-top: 1px solid var(--light-gray);
@@ -810,7 +854,7 @@ main {
 }
 
 /*-------------------------------------------------*
-Featured Products
+Featured Products Block
 *--------------------------------------------------*/
 ul.products{
     display: grid;
@@ -1161,7 +1205,6 @@ Product Page
     position: relative;
      > .product{
         display: flex;
-        // grid-template-columns: repeat(2, 1fr);
         gap: 40px 24px;
         flex-wrap: wrap;
         position: relative;
