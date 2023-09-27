@@ -47,10 +47,21 @@ var filter_opener = document.querySelector(".filter-text");
 var filterWrapper = document.querySelector(".wpf_form_filter");
 
 if (filter_opener) {
-    filterWrapper.classList.add("filter-off");
+    // filterWrapper.classList.add("filter-off");
 
     filter_opener.addEventListener("click", function () {
-        filterWrapper.classList.toggle("filter-off");
+        filterWrapper.parentElement.classList.toggle("filter-off");
+    });
+
+    jQuery(document).on("wpf_ajax_success", function () {
+        // new products are loaded in the page. Yay!
+        var filter_opener = document.querySelector(".filter-text");
+        var filterWrapper = document.querySelector(".wpf_form_filter");
+        filterWrapper.parentElement.classList.remove("filter-off");
+
+        filter_opener.addEventListener("click", function () {
+            filterWrapper.parentElement.classList.toggle("filter-off");
+        });
     });
 }
 
