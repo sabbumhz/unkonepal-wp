@@ -211,7 +211,7 @@ b{
     font-weight: 600;
 }
 
-.hidden{
+.style-hidden{
     visibility: hidden;
     opacity: 0;
     height: 0;
@@ -2680,12 +2680,30 @@ Product Filter Section
 }
 
 .wpf_form_filter{
+    .wpf_layout_vertical{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+        @media (min-width: 768px) {
+            top: 160px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .wpf_item{
+        padding: 0;
+    }
+    .wpf_layout_vertical .wpf_item + .wpf_item .wpf_item_name{
+        margin-top: 0;
+    }
+}
+
+.form-filter__js{
     position: absolute;
     background-color: var(--light);
     width: 100%;
     z-index: 5;
     padding: 40px;
-    top: 140px;
+    top: 160px;
     margin-bottom: 0 !important;
     visibility: visible;
     transition: all 0.5s ease-in-out;
@@ -2712,21 +2730,6 @@ Product Filter Section
             top: 170px;
         } 
     }
-    .wpf_layout_vertical{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 40px;
-        @media (min-width: 768px) {
-            top: 160px;
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-    .wpf_item{
-        padding: 0;
-    }
-    .wpf_layout_vertical .wpf_item + .wpf_item .wpf_item_name{
-        margin-top: 0;
-    }
 }
 
 .woocommerce-products-header__title.page-title{
@@ -2747,5 +2750,21 @@ Product Filter Section
 .page p{
     a{
         color: var(--teal);
+    }
+}
+
+// ajax lodmore in related product of knitters page
+
+.products-navigation{
+    display: flex;
+    justify-content: center;
+}
+.loadmore_product_js{
+    margin-top: 24px;
+    @media (min-width: 768px) {
+        margin-top: 32px;
+    }
+    @media (min-width: 1024px) {
+        margin-top: 40px;
     }
 }

@@ -41,7 +41,7 @@ $footerArray = get_option('unkonepal_theme_options');
 				<form action="https://unkonepal.us21.list-manage.com/subscribe/post?u=5bcecf51f857fb7e514be67fd&amp;id=25da91c150&amp;f_id=008925e7f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self">
 				<div id="mc_embed_signup_scroll">
 				<div class="mc-field-group">
-					<label for="subsciberEmail"><span class="hidden">Enter Your email here</span>
+					<label for="subsciberEmail"><span class="style-hidden">Enter Your email here</span>
 					<input id="subsciberEmail" type="email" value="" name="EMAIL" aria-labelledby="subsciberEmail" class="required email" id="mce-EMAIL" placeholder="Your Email Here" required>
 					<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
 				</div>
@@ -50,7 +50,7 @@ $footerArray = get_option('unkonepal_theme_options');
 					<div class="response" id="mce-success-response" style="display:none"></div>
 				</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 				<div style="position: absolute; left: -5000px;" aria-hidden="true">
-				<label for="submit-btn"><span class="hidden">Submit</span>
+				<label for="submit-btn"><span class="style-hidden">Submit</span>
 				<input type="text" id="submit-btn" name="b_5bcecf51f857fb7e514be67fd_25da91c150" tabindex="-1" value=""></div>
 					<div class="optionalParent">
 						<div class="clear foot">

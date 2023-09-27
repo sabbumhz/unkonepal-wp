@@ -27,11 +27,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Allura&family=Domine:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     </head>
-    <style>
-        .filter-off{
-            display: none !important;
-        }
-    </style>
 <body  <?php body_class(); ?>>
 <!-- header start -->
 <header>

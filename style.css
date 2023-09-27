@@ -2502,7 +2502,7 @@ b {
   font-weight: 600;
 }
 
-.hidden {
+.style-hidden {
   visibility: hidden;
   opacity: 0;
   height: 0;
@@ -5948,48 +5948,6 @@ Product Filter Section
   text-align: right;
 }
 
-.wpf_form_filter {
-  position: absolute;
-  background-color: var(--light);
-  width: 100%;
-  z-index: 5;
-  padding: 40px;
-  top: 140px;
-  margin-bottom: 0 !important;
-  visibility: visible;
-  transition: all 0.5s ease-in-out;
-  transform: translateY(-10%);
-  box-shadow: 0 4px 8px rgba(140, 101, 81, 0.1);
-  border-top: 1px solid var(--chestnut);
-}
-@media (min-width: 768px) {
-  .wpf_form_filter {
-    top: 160px;
-  }
-}
-@media (min-width: 1024px) {
-  .wpf_form_filter {
-    top: 200px;
-  }
-}
-.wpf_form_filter.filter-off {
-  z-index: -1;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10%);
-  top: 120px;
-  position: absolute;
-}
-@media (min-width: 768px) {
-  .wpf_form_filter.filter-off {
-    top: 140px;
-  }
-}
-@media (min-width: 1024px) {
-  .wpf_form_filter.filter-off {
-    top: 170px;
-  }
-}
 .wpf_form_filter .wpf_layout_vertical {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -6006,6 +5964,49 @@ Product Filter Section
 }
 .wpf_form_filter .wpf_layout_vertical .wpf_item + .wpf_item .wpf_item_name {
   margin-top: 0;
+}
+
+.form-filter__js {
+  position: absolute;
+  background-color: var(--light);
+  width: 100%;
+  z-index: 5;
+  padding: 40px;
+  top: 160px;
+  margin-bottom: 0 !important;
+  visibility: visible;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-10%);
+  box-shadow: 0 4px 8px rgba(140, 101, 81, 0.1);
+  border-top: 1px solid var(--chestnut);
+}
+@media (min-width: 768px) {
+  .form-filter__js {
+    top: 160px;
+  }
+}
+@media (min-width: 1024px) {
+  .form-filter__js {
+    top: 200px;
+  }
+}
+.form-filter__js.filter-off {
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10%);
+  top: 120px;
+  position: absolute;
+}
+@media (min-width: 768px) {
+  .form-filter__js.filter-off {
+    top: 140px;
+  }
+}
+@media (min-width: 1024px) {
+  .form-filter__js.filter-off {
+    top: 170px;
+  }
 }
 
 .woocommerce-products-header__title.page-title {
@@ -6033,4 +6034,23 @@ Product Filter Section
 .page .woocommerce button a,
 .woocommerce .page button a, .page .shop_table .actions button a, .shop_table .actions .page button a, .page .wc-proceed-to-checkout a a, .wc-proceed-to-checkout .page a a, .page .woocommerce-checkout-payment button a, .woocommerce-checkout-payment .page button a, .page .logged-in .woocommerce .woocommerce-MyAccount-content header a.edit a, .logged-in .woocommerce .woocommerce-MyAccount-content header .page a.edit a {
   color: var(--teal);
+}
+
+.products-navigation {
+  display: flex;
+  justify-content: center;
+}
+
+.loadmore_product_js {
+  margin-top: 24px;
+}
+@media (min-width: 768px) {
+  .loadmore_product_js {
+    margin-top: 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .loadmore_product_js {
+    margin-top: 40px;
+  }
 }/*# sourceMappingURL=style.css.map */
