@@ -47,10 +47,19 @@ var filter_opener = document.querySelector(".filter-text");
 var filterWrapper = document.querySelector(".wpf_form_filter");
 
 if (filter_opener) {
-    filterWrapper.classList.add("filter-off");
-
     filter_opener.addEventListener("click", function () {
-        filterWrapper.classList.toggle("filter-off");
+        filterWrapper.parentElement.classList.toggle("filter-off");
+    });
+
+    jQuery(document).on("wpf_ajax_success", function () {
+        // new products are loaded in the page. Yay!
+        var filter_opener = document.querySelector(".filter-text");
+        var filterWrapper = document.querySelector(".wpf_form_filter");
+        filterWrapper.parentElement.classList.remove("filter-off");
+
+        filter_opener.addEventListener("click", function () {
+            filterWrapper.parentElement.classList.toggle("filter-off");
+        });
     });
 }
 
@@ -81,6 +90,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    if (currentIndex >= items.length) {
+        loadMoreButton.style.display = "none"; // Hide the button when all hidden items are visible.
+    }
+
     // Initially hide all items except the first 3.
     for (let i = 0; i < items.length; i++) {
         if (i >= 3) {
@@ -88,8 +101,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Check if there are no hidden items initially, hide the "Load More" button.
-    if (items.length <= 3) {
-        loadMoreButton.style.display = "none";
-    }
+    // // Check if there are no hidden items initially, hide the "Load More" button.
+    // if (items.length <= 3) {
+    //     loadMoreButton.style.display = "none";
+    // }else{
+    //     loadMoreButton.style.display = "block";
+    // }
 });

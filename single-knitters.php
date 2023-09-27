@@ -36,7 +36,7 @@ if($knitter_products):?>
         </ul>
 
         <span class="products-navigation">
-            <button class="loadmore_product_js">Loadmore</button>
+            <button class="btn btn--primary loadmore_product_js">Loadmore</button>
         </span>
     </section>
 <?php

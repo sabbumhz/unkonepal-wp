@@ -30,7 +30,7 @@ else :
     ?>
     <!-- collection section start -->
     <section>
-        <?php 
+        <?php
         if( have_rows('category_list') ):
         ?>
         <ul class="collection-list">
@@ -43,9 +43,9 @@ else :
                 $category_link         = get_sub_field('category_link');
                 if( $category_feature_image ) {
                 ?><img src="<?php echo esc_url($category_feature_image ['url']); ?>" alt="<?php echo esc_attr($category_feature_image ['alt']); ?>"/>
-                <?php 
+                <?php
                 }
-                if( $category_link  ): 
+                if( $category_link  ):
                     $link_url = $category_link ['url'];
                     $link_title = $category_link ['title'];
                     $link_target = $category_link ['target'] ? $link['target'] : '_self';
@@ -53,7 +53,7 @@ else :
                 <a class="btn btn--underline" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
                     <?php echo esc_html( $link_title ); ?>
                 </a>
-                <?php 
+                <?php
                 endif;
                 ?>
             </li>
